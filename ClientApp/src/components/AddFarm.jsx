@@ -6,7 +6,12 @@ import { Header } from './Header'
 export function AddFarm() {
   return (
     <>
-      {/* <form>
+      <div className="add-farm-msg">
+        <h4>Add a Farm</h4>
+        <h3>Fill out the form below to add a farm to the database.</h3>
+      </div>
+
+      <form>
         <ul className="flex-outer">
           <li>
             <label htmlFor="name">Name</label>
@@ -35,43 +40,41 @@ export function AddFarm() {
               placeholder="Enter a description of the farm"
             ></textarea>
           </li>
-          <ul className="flex-inner">
-            <li>
-              <label htmlFor="organic">Certified Organic?</label>
-              <select name="organic" id="organic">
-                <option>Choose an option</option>
-                <option>Yes</option>
-              </select>
-            </li>
-            <li>
-              <label htmlFor="meat">Sells meat?</label>
-              <select name="meat" id="meat">
-                <option>Choose an option</option>
-                <option>Yes</option>
-              </select>
-            </li>
-            <li>
-              <label htmlFor="eggs">Sells eggs?</label>
-              <select name="eggs" id="eggs">
-                <option>Choose an option</option>
-                <option>Yes</option>
-              </select>
-            </li>
-            <li>
-              <label htmlFor="dairy">Sells milk?</label>
-              <select name="milk" id="milk">
-                <option>Choose an option</option>
-                <option>Yes</option>
-              </select>
-            </li>
-          </ul>
+          <li>
+            <label htmlFor="organic">Certified Organic?</label>
+            <select name="organic" id="organic">
+              <option>Choose an option</option>
+              <option>Yes</option>
+            </select>
+          </li>
+          <li>
+            <label htmlFor="meat">Sells meat?</label>
+            <select name="meat" id="meat">
+              <option>Choose an option</option>
+              <option>Yes</option>
+            </select>
+          </li>
+          <li>
+            <label htmlFor="eggs">Sells eggs?</label>
+            <select name="eggs" id="eggs">
+              <option>Choose an option</option>
+              <option>Yes</option>
+            </select>
+          </li>
+          <li>
+            <label htmlFor="dairy">Sells milk?</label>
+            <select name="milk" id="milk">
+              <option>Choose an option</option>
+              <option>Yes</option>
+            </select>
+          </li>
           <li>
             <button type="submit" className="submit">
               Submit
             </button>
           </li>
         </ul>
-      </form> */}
+      </form>
     </>
   )
 }

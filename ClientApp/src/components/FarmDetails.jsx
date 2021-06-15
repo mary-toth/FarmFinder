@@ -15,16 +15,17 @@ export function FarmDetails() {
               }
             ></img>
           </li>
-          <li className="name">Farm Name</li>
+          <li className="farm-detail-name">Meacham Urban Farm</li>
 
-          <p>Address: 123 Main St</p>
-          <p>Phone: 123-456-7890</p>
-          <h4>
+          <h4 className="farm-detail-description">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Asperiores, numquam aspernatur? Eaque, dicta quaerat tempore odio
             nesciunt sapiente. Sint praesentium eius perspiciatis itaque odio et
             dicta nobis. Dolorum, ab dignissimos?
           </h4>
+
+          <p>Address: 123 Main St</p>
+          <p>Phone: 123-456-7890</p>
           <p>Certified Organic</p>
           <p>Sells Meat: Yes</p>
           <p>Sells Eggs: Yes</p>

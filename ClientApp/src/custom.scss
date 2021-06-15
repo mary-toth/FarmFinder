@@ -81,13 +81,16 @@ div.body {
   text-align: center;
   line-height: 2rem;
   margin: 50px;
+  border: solid rgb(80, 72, 65);
+  border-radius: 1rem;
   color: rgb(80, 72, 65);
+  padding: 30px;
 }
 
 footer {
   font-size: 14px;
   padding: 10px;
-  position: fixed;
+  // position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -158,59 +161,36 @@ img.farmlistimage {
 }
 
 //add farm page *****************************************************************************
-
-.search {
-  padding: 20px;
-  display: flex;
-  border: solid;
+div.add-farm-msg {
+  // background-color: rgb(161, 187, 161);
+  padding: 10px;
+  color: rgb(80, 72, 65);
+  margin-left: 40px;
 }
 
-input {
-  width: 200px;
-}
-.flex-outer li {
+ul.flex-outer {
   display: flex;
-  flex-wrap: wrap;
-}
-form {
-  border: solid rgb(236, 233, 217);
-  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 50px;
+  border: solid rgb(161, 147, 134);
+  border-radius: 2rem;
   margin: 20px;
 }
 
-label {
-  width: 160px;
-}
-input {
-  font-family: 'Open Sans', sans-serif;
-
-  padding: 5px;
+ul.flex-outer li {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
-.flex-outer li {
-  margin: 5px;
+#name,
+#address {
+  padding: 10px;
+  margin-top: 10px;
 }
-.flex-outer li,
-.flex-inner {
-  .form-inline {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-  }
-  .flex-inner li {
-    margin: 5px;
-  }
-  textarea {
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
-  }
-  select {
-    padding: 5px;
-    font-family: 'Open Sans', sans-serif;
-  }
-  button.submit:hover {
-    color: rgb(143, 143, 143);
-  }
+#description {
+  height: 100px;
 }
 
 // farm detail page *************************************
@@ -224,12 +204,14 @@ nav.details {
   margin: 20px;
   padding: 10px;
 }
-li.name {
-  font-size: 18px;
+li.farm-detail-name {
+  font-size: 20px;
   list-style: none;
   text-align: center;
   padding: 10px;
-  background-color: white;
+  margin: 10px;
+  background-color: rgb(194, 229, 194);
+  border-radius: 1rem;
 }
 ul.details {
   border-radius: 3rem;
@@ -242,4 +224,7 @@ img {
   width: 200px;
   height: 200px;
   border-radius: 2rem;
+}
+.farm-detail-description {
+  line-height: 30px;
 }
