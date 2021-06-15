@@ -6,47 +6,49 @@ import { Header } from './Header'
 export function ViewFarms() {
   return (
     <>
-      <div className="search">
-        <ul>
-          <li>Find a Farm</li>
+      <div className="filter">
+        <ul className="filterbar">
+          <h4>Find a Farm</h4>
           <li>
             <input
               className="searchfarms"
               placeholder="search by farm name"
             ></input>
           </li>
-          <li>
-            <select name="city" id="city">
-              <option value="city">City (choose one)</option>
-              <option value="tampa">Tampa</option>
-              <option value="stpete">St. Pete</option>
-              <option value="riverview">Riverview</option>
-            </select>
-          </li>
-          <li>
-            <select name="organic" id="organic">
-              <option value="organic">Certified Organic?</option>
-              <option>Yes</option>
-            </select>
-          </li>
-          <li>
-            <select name="meat" id="meat">
-              <option value="meat">Meat?</option>
-              <option>Yes</option>
-            </select>
-          </li>
-          <li>
-            <select name="eggs" id="eggs">
-              <option value="eggs">Eggs?</option>
-              <option>Yes</option>
-            </select>
-          </li>
-          <li>
-            <select name="dairy" id="dairy">
-              <option value="dairy">Dairy?</option>
-              <option>Yes</option>
-            </select>
-          </li>
+          <ul className="filter">
+            <li>
+              <select name="city" id="city">
+                <option value="city">City (choose one)</option>
+                <option value="tampa">Tampa</option>
+                <option value="stpete">St. Pete</option>
+                <option value="riverview">Riverview</option>
+              </select>
+            </li>
+            <li>
+              <select name="organic" id="organic">
+                <option value="organic">Certified Organic?</option>
+                <option>Yes</option>
+              </select>
+            </li>
+            <li>
+              <select name="meat" id="meat">
+                <option value="meat">Meat?</option>
+                <option>Yes</option>
+              </select>
+            </li>
+            <li>
+              <select name="eggs" id="eggs">
+                <option value="eggs">Eggs?</option>
+                <option>Yes</option>
+              </select>
+            </li>
+            <li>
+              <select name="dairy" id="dairy">
+                <option value="dairy">Dairy?</option>
+                <option>Yes</option>
+              </select>
+            </li>
+          </ul>
         </ul>
       </div>
 

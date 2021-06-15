@@ -6,7 +6,7 @@ import { Header } from './Header'
 export function AddFarm() {
   return (
     <>
-      <form>
+      {/* <form>
         <ul className="flex-outer">
           <li>
             <label htmlFor="name">Name</label>
@@ -71,7 +71,7 @@ export function AddFarm() {
             </button>
           </li>
         </ul>
-      </form>
+      </form> */}
     </>
   )
 }
