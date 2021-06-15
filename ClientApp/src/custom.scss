@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 :root {
   font: 16px / 1 sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -9,4 +11,169 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+}
+
+header {
+  padding: 10px;
+  border-bottom: solid rgb(148, 133, 120);
+}
+
+li,
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+ul.nav_links {
+  list-style: none;
+}
+ul.nav_links li {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 3px;
+  font-size: 10px;
+  // border: solid;
+}
+
+div.test {
+  background-color: rgb(148, 133, 120);
+  padding: 10px;
+  color: rgb(235, 227, 201);
+}
+
+div.hero {
+  background-image: url('/images/farm2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+h1 {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  border-radius: 1rem;
+}
+button {
+  font-family: 'Open Sans', sans-serif;
+  // margin-bottom: 90px;
+  padding: 15px;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+div.body {
+  text-align: center;
+  line-height: 2rem;
+  margin: 50px;
+}
+
+footer {
+  font-size: 14px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100;
+  background-color: rgb(148, 133, 120);
+}
+
+//view farm page *******************************************************
+.findfarm {
+  text-align: center;
+  // margin-left: 50px;
+}
+input {
+  text-align: center;
+
+  // margin-left: 50px;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+article.farm {
+  border: thin solid rgb(207, 200, 158);
+  padding: 30px;
+  margin: 30px;
+  height: 250px;
+  width: 250px;
+}
+.farminfo {
+  list-style: none;
+  padding: 10px;
+}
+.farmName {
+  list-style: none;
+  font-weight: bold;
+}
+
+.farmImage {
+  width: 200px;
+  height: 200px;
+}
+//add farm page *******************************************************
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+
+  // border: solid;
+}
+form {
+  border: solid rgb(236, 233, 217);
+  display: flex;
+  margin: 20px;
+}
+
+label {
+  width: 160px;
+}
+input {
+  font-family: 'Open Sans', sans-serif;
+
+  padding: 5px;
+}
+
+.flex-outer li {
+  margin: 5px;
+}
+.flex-outer li,
+.flex-inner {
+  .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    // border: solid;
+  }
+  .flex-inner li {
+    // display: inline-block;
+    margin: 5px;
+  }
+  textarea {
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  select {
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  button.submit:hover {
+    color: rgb(143, 143, 143);
+  }
 }

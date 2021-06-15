@@ -1,8 +1,30 @@
 import React from 'react'
-import './custom.scss'
+import { Link, Route, Switch } from 'react-router-dom'
+import { AddFarm } from './components/AddFarm'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { Home } from './components/Home'
+import { ViewFarms } from './components/ViewFarms'
 
 export function App() {
   return (
-    <div className="d-flex justify-content-center display-2">Hello, World!</div>
+    <>
+      <Header></Header>
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/farms">
+          <ViewFarms />
+        </Route>
+        <Route exact path="/addfarm">
+          <AddFarm />
+        </Route>
+        <Route path="*">Not Found</Route>
+      </Switch>
+
+      <Footer />
+    </>
   )
 }
