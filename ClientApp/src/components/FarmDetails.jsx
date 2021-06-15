@@ -23,12 +23,13 @@ export function FarmDetails() {
             nesciunt sapiente. Sint praesentium eius perspiciatis itaque odio et
             dicta nobis. Dolorum, ab dignissimos?
           </h4>
-
-          <p>Address: 123 Main St</p>
-          <p>Phone: 123-456-7890</p>
-          <p>Certified Organic</p>
-          <p>Sells Meat: Yes</p>
-          <p>Sells Eggs: Yes</p>
+          <div className="farm-detail-info">
+            <li>Address: 123 Main St</li>
+            <li>Phone: 123-456-7890</li>
+            <li>Certified Organic</li>
+            <li>Sells Meat: Yes</li>
+            <li>Sells Eggs: Yes</li>
+          </div>
         </ul>
       </nav>
     </>

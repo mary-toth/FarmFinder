@@ -5,7 +5,7 @@ export function Home() {
         <h1>Welcome to Farm Finder</h1>
 
         <h2>Support Local Farmers in Your Area Today</h2>
-        <button>Find a Farm Near Me</button>
+        <button className="home">Find a Farm Near Me</button>
       </div>
       <div className="body">
         <h2>Who are we?</h2>

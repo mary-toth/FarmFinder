@@ -6,13 +6,13 @@ import { Header } from './Header'
 export function AddFarm() {
   return (
     <>
-      <div className="add-farm-msg">
-        <h4>Add a Farm</h4>
-        <h3>Fill out the form below to add a farm to the database.</h3>
-      </div>
+      <div className="add-farm-msg"></div>
 
       <form>
         <ul className="flex-outer">
+          <li className="add-farm-txt">Add a Farm</li>
+          <li> Fill out the form below to add a farm to the database.</li>
+
           <li>
             <label htmlFor="name">Name</label>
             <input type="text" id="name" placeholder="Enter the farm's name" />

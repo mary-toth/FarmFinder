@@ -15,7 +15,7 @@ body {
 
 header {
   padding: 10px;
-  border-bottom: thin solid rgb(148, 133, 120);
+  // border-bottom: thin solid rgb(148, 133, 120);
 }
 h2.name {
   color: rgb(80, 72, 65);
@@ -68,7 +68,7 @@ h1 {
   padding: 20px 20px 20px 20px;
   border-radius: 1rem;
 }
-button {
+button.home {
   font-family: 'Open Sans', sans-serif;
   // margin-bottom: 90px;
   padding: 15px;
@@ -81,7 +81,7 @@ div.body {
   text-align: center;
   line-height: 2rem;
   margin: 50px;
-  border: solid rgb(80, 72, 65);
+  border: solid rgb(161, 147, 134);
   border-radius: 1rem;
   color: rgb(80, 72, 65);
   padding: 30px;
@@ -101,16 +101,21 @@ footer {
 //view farm page ******************************************************************
 
 div.filter {
-  background-color: rgb(185, 207, 185);
+  background-color: rgb(225, 236, 225);
+  background-image: url('https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 10px;
 }
 ul.filterbar {
   list-style: none;
 }
 h4 {
-  color: rgb(80, 72, 65);
-  font-size: 20px;
+  color: rgb(58, 52, 47);
+  font-size: 30px;
   margin-bottom: 15px;
+  width: 200px;
 }
 ul.filter {
   display: flex;
@@ -162,10 +167,12 @@ img.farmlistimage {
 
 //add farm page *****************************************************************************
 div.add-farm-msg {
-  // background-color: rgb(161, 187, 161);
-  padding: 10px;
-  color: rgb(80, 72, 65);
-  margin-left: 40px;
+  background-color: rgb(225, 236, 225);
+  background-image: url('https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px;
 }
 
 ul.flex-outer {
@@ -183,6 +190,10 @@ ul.flex-outer li {
   flex-direction: column;
   margin: 10px;
 }
+li.add-farm-txt {
+  font-weight: bold;
+  font-size: 23px;
+}
 
 #name,
 #address {
@@ -191,6 +202,14 @@ ul.flex-outer li {
 }
 #description {
   height: 100px;
+}
+
+button.submit {
+  border-radius: 1rem;
+  border: none;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 // farm detail page *************************************
@@ -227,4 +246,14 @@ img {
 }
 .farm-detail-description {
   line-height: 30px;
+}
+.farm-detail-info {
+  display: flex;
+  flex-direction: column;
+  border: thin solid rgb(161, 147, 134);
+  border-radius: 2rem;
+}
+.farm-detail-info li {
+  margin: 10px;
+  padding: 5px;
 }
