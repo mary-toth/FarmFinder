@@ -5,6 +5,7 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { ViewFarms } from './components/ViewFarms'
+import { FarmDetails } from './components/FarmDetails'
 
 export function App() {
   return (
@@ -20,6 +21,9 @@ export function App() {
         </Route>
         <Route exact path="/addfarm">
           <AddFarm />
+        </Route>
+        <Route exact path="/farmdetails">
+          <FarmDetails />
         </Route>
         <Route path="*">Not Found</Route>
       </Switch>

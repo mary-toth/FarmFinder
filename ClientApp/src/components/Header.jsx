@@ -4,7 +4,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 export function Header() {
   return (
     <>
-      <div className="test">.</div>
+      <div className="dot">.</div>
 
       <header>
         <h2 className="name"> Farm Finder</h2>

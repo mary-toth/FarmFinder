@@ -9,7 +9,9 @@ export function ViewFarms() {
       <section>
         <article className="farm">
           <ul>
-            <li className="farmName">Farm Name</li>
+            <li className="farmName">
+              <Link to="/farmdetails"> Farm Name</Link>
+            </li>
             <li className="farminfo">description</li>
             <li className="farminfo">address</li>
             <li className="farminfo">phone</li>

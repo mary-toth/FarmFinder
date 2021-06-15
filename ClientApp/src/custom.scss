@@ -17,11 +17,15 @@ header {
   padding: 10px;
   border-bottom: solid rgb(148, 133, 120);
 }
+h2.name {
+  color: rgb(80, 72, 65);
+}
 
 li,
 a {
   text-decoration: none;
   color: black;
+  color: rgb(80, 72, 65);
 }
 
 header {
@@ -39,13 +43,12 @@ ul.nav_links li {
   padding: 5px;
   margin-right: 3px;
   font-size: 10px;
-  // border: solid;
 }
 
-div.test {
+div.dot {
   background-color: rgb(148, 133, 120);
   padding: 10px;
-  color: rgb(235, 227, 201);
+  color: rgb(148, 133, 120);
 }
 
 div.hero {
@@ -78,6 +81,7 @@ div.body {
   text-align: center;
   line-height: 2rem;
   margin: 50px;
+  color: rgb(80, 72, 65);
 }
 
 footer {
@@ -94,12 +98,9 @@ footer {
 //view farm page *******************************************************
 .findfarm {
   text-align: center;
-  // margin-left: 50px;
 }
 input {
   text-align: center;
-
-  // margin-left: 50px;
 }
 section {
   display: flex;
@@ -131,8 +132,6 @@ article.farm {
 .flex-outer li {
   display: flex;
   flex-wrap: wrap;
-
-  // border: solid;
 }
 form {
   border: solid rgb(236, 233, 217);
@@ -158,11 +157,8 @@ input {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-
-    // border: solid;
   }
   .flex-inner li {
-    // display: inline-block;
     margin: 5px;
   }
   textarea {
@@ -176,4 +172,36 @@ input {
   button.submit:hover {
     color: rgb(143, 143, 143);
   }
+}
+
+// farm detail page *************************************
+
+nav.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid rgb(148, 133, 120);
+  border-radius: 3rem;
+  margin: 20px;
+  padding: 10px;
+}
+li.name {
+  font-size: 18px;
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+ul.details {
+  border-radius: 3rem;
+  list-style: none;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  color: rgb(80, 72, 65);
+}
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 2rem;
 }
