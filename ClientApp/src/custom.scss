@@ -95,39 +95,68 @@ footer {
   background-color: rgb(148, 133, 120);
 }
 
-//view farm page *******************************************************
-.findfarm {
-  text-align: center;
-}
-input {
-  text-align: center;
+//view farm page ******************************************************************
+
+nav.farmlist {
+  // border: thin solid rgb(148, 133, 120);
 }
 section {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: space-evenly;
+  border-radius: 3rem;
+  margin: 1px;
 }
-article.farm {
-  border: thin solid rgb(207, 200, 158);
+a.farmName {
+  font-size: 20px;
+  text-align: center;
+}
+ul.farmlist {
+  border-radius: 3rem;
+  list-style: none;
   padding: 30px;
-  margin: 30px;
-  height: 250px;
-  width: 250px;
-}
-.farminfo {
-  list-style: none;
-  padding: 10px;
-}
-.farmName {
-  list-style: none;
-  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  text-align: center;
+  color: rgb(80, 72, 65);
 }
 
-.farmImage {
+p {
+  border: thin solid rgb(221, 210, 201);
+  border-radius: 1rem;
+  padding: 10px;
+}
+img.farmlistimage {
+  margin-bottom: 20px;
   width: 200px;
   height: 200px;
 }
-//add farm page *******************************************************
+// article.farm {
+//   border: solid rgb(148, 133, 120);
+//   border-radius: 3rem;
+//   padding: 30px;
+//   margin: 30px;
+//   height: 250px;
+//   width: 250px;
+// }
+
+// article ul {
+//   display: flex;
+//   margin-top: 6px;
+//   margin-bottom: 18px;
+//   list-style: none;
+//   justify-content: space-between;
+// }
+
+// .farminfo {
+//   list-style: none;
+// }
+// .farmName {
+//   list-style: none;
+//   font-weight: bold;
+// }
+//add farm page *****************************************************************************
 
 .flex-outer li {
   display: flex;
@@ -198,7 +227,6 @@ ul.details {
   padding: 20px;
   background-color: white;
   text-align: center;
-  color: rgb(80, 72, 65);
 }
 img {
   width: 200px;
