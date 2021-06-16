@@ -33,6 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  border-bottom: 2px solid rgb(148, 133, 120);
 }
 
 ul.nav_links {
@@ -125,6 +126,7 @@ h4 {
   padding: 15px;
   margin-bottom: 5px;
   width: 170px;
+  text-align: center;
 }
 ul.filter {
   display: flex;
@@ -153,21 +155,23 @@ ul.farmlist {
   border-radius: 3rem;
   list-style: none;
   padding: 30px;
+  margin: 40px;
   text-align: center;
   background-color: white;
   text-align: center;
   color: rgb(80, 72, 65);
+  border: 2px solid rgb(148, 133, 120);
 }
-
+ul.farmlist li {
+  margin-bottom: 20px;
+}
 p {
   border: thin solid rgb(212, 201, 191);
   border-radius: 1rem;
   padding: 10px;
 }
-img.farmlistimage {
-  margin-bottom: 20px;
-  width: 200px;
-  height: 200px;
+p.farm-image {
+  border: none;
 }
 
 //add farm page *****************************************************************************
