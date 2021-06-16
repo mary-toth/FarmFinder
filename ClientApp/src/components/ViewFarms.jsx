@@ -9,7 +9,7 @@ export function ViewFarms() {
   useEffect(() => {
     async function loadFarms() {
       const response = await fetch('/api/Farms')
-      
+
       if (response.ok) {
         const json = await response.json()
         setFarms(json)
@@ -74,15 +74,16 @@ export function ViewFarms() {
                 {farm.name}
               </Link>
               <p>{farm.address}</p>
-              <p></p>
+              <p>
+                <img
+                  className="farmlistimage"
+                  src={
+                    'https://images.squarespace-cdn.com/content/v1/5ac4165c9d5abb096069c163/1526611351559-0WDGD8E8QRBR9USSYSEY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/IMG_1274.JPG?format=1500w'
+                  }
+                ></img>
+              </p>
             </li>
           ))}
-          {/* <img
-            className="farmlistimage"
-            src={
-              'https://images.squarespace-cdn.com/content/v1/5ac4165c9d5abb096069c163/1526611351559-0WDGD8E8QRBR9USSYSEY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/IMG_1274.JPG?format=1500w'
-            }
-          ></img> */}
         </ul>
       </section>
     </>

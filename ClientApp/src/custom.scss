@@ -142,19 +142,14 @@ select {
   // border: none;
 }
 
-section {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: space-evenly;
-  border-radius: 3rem;
-  margin: 1px;
-}
 a.farmName {
   font-size: 20px;
   text-align: center;
 }
 ul.farmlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   border-radius: 3rem;
   list-style: none;
   padding: 30px;
