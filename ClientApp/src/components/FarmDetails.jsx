@@ -17,12 +17,12 @@ export function FarmDetails() {
           </li>
           <li className="farm-detail-name">Meacham Urban Farm</li>
 
-          <h4 className="farm-detail-description">
+          <p className="farm-detail-txt">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Asperiores, numquam aspernatur? Eaque, dicta quaerat tempore odio
             nesciunt sapiente. Sint praesentium eius perspiciatis itaque odio et
             dicta nobis. Dolorum, ab dignissimos?
-          </h4>
+          </p>
           <div className="farm-detail-info">
             <li>Address: 123 Main St</li>
             <li>Phone: 123-456-7890</li>

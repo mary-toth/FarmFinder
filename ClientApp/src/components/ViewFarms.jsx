@@ -11,7 +11,7 @@ export function ViewFarms() {
           <h4>Find a Farm</h4>
           <li>
             <input
-              className="searchfarms"
+              className="search-farms"
               placeholder="search by farm name"
             ></input>
           </li>

@@ -69,6 +69,7 @@ export function AddFarm() {
             </select>
           </li>
           <li>
+            {/* make this button an input. input type=submit */}
             <button type="submit" className="submit">
               Submit
             </button>

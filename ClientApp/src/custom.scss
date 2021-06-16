@@ -80,7 +80,7 @@ button.home {
 div.body {
   text-align: center;
   line-height: 2rem;
-  margin: 50px;
+  margin: 20px;
   border: solid rgb(161, 147, 134);
   border-radius: 1rem;
   color: rgb(80, 72, 65);
@@ -111,11 +111,20 @@ div.filter {
 ul.filterbar {
   list-style: none;
 }
-h4 {
-  color: rgb(58, 52, 47);
-  font-size: 30px;
-  margin-bottom: 15px;
+.search-farms {
+  padding: 10px;
   width: 200px;
+  margin-bottom: -10px;
+  border: none;
+}
+h4 {
+  color: rgb(95, 81, 74);
+  background-color: rgba(255, 255, 255, 0.8);
+  // border-radius: 1rem;
+  font-size: 30px;
+  padding: 15px;
+  margin-bottom: 5px;
+  width: 170px;
 }
 ul.filter {
   display: flex;
@@ -130,6 +139,7 @@ select {
   margin-right: 5px;
   margin-top: 5px;
   font-family: 'Open Sans', sans-serif;
+  // border: none;
 }
 
 section {
@@ -199,9 +209,11 @@ li.add-farm-txt {
 #address {
   padding: 10px;
   margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 #description {
   height: 100px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button.submit {
@@ -245,12 +257,12 @@ img {
   border-radius: 2rem;
 }
 .farm-detail-description {
-  line-height: 30px;
+  // line-height: 20px;
+  font-size: 16px;
 }
-.farm-detail-info {
-  display: flex;
-  flex-direction: column;
-  border: thin solid rgb(161, 147, 134);
+p.farm-detail-txt {
+  border: solid rgb(161, 147, 134);
+  padding: 10px;
   border-radius: 2rem;
 }
 .farm-detail-info li {
