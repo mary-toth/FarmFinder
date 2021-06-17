@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
-import { Footer } from './Footer'
-import { Header } from './Header'
+import { Link } from 'react-router-dom'
 
 export function ViewFarms() {
   const [farms, setFarms] = useState([])
+  const [filterText, setFilterText] = useState('')
 
   useEffect(() => {
     async function loadFarms() {
-      const response = await fetch('/api/Farms')
+      const url =
+        filterText.length === 0
+          ? '/api/Farms'
+          : `/api/Farms?filter=${filterText}`
+      const response = await fetch(url)
 
       if (response.ok) {
         const json = await response.json()
@@ -16,7 +19,7 @@ export function ViewFarms() {
       }
     }
     loadFarms()
-  }, [])
+  }, [filterText])
 
   return (
     <>
@@ -25,8 +28,13 @@ export function ViewFarms() {
           <h4>Find a Farm</h4>
           <li>
             <input
+              type="text"
               className="search-farms"
               placeholder="search by farm name"
+              value={filterText}
+              onChange={function (event) {
+                setFilterText(event.target.value)
+              }}
             ></input>
           </li>
           <ul className="filter">
