@@ -28,6 +28,9 @@ namespace FarmFinder.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("text");
 
+                    b.Property<string>("City")
+                        .HasColumnType("text");
+
                     b.Property<bool>("Dairy")
                         .HasColumnType("boolean");
 

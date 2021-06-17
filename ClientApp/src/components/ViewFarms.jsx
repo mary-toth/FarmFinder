@@ -77,7 +77,7 @@ export function ViewFarms() {
       <section>
         <ul className="farmlist">
           {farms.map((farm) => (
-            <li>
+            <li key={farm.id}>
               <p className="farm-image">
                 <img
                   className="farm-image"
