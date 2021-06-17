@@ -31,12 +31,23 @@ namespace FarmFinder.Controllers
         // Returns a list of all your Farms
         //
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Farm>>> GetFarms()
+        public async Task<ActionResult<IEnumerable<Farm>>> GetFarms(string filter)
         {
             // Uses the database context in `_context` to request all of the Farms, sort
             // them by row id and return them as a JSON array.
-            return await _context.Farms.OrderBy(row => row.Id).ToListAsync();
+            if (filter == null)
+            {
+                return await _context.Farms.OrderBy(row => row.Id).ToListAsync();
+
+            }
+            else
+            {
+                //use the filter:
+                return await _context.Farms.Where(farm => farm.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
+            }
         }
+
+
 
         // GET: api/Farms/5
         //
