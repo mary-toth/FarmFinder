@@ -47,28 +47,50 @@ export function ViewFarms() {
               </select>
             </li>
             <li>
-              <select name="organic" id="organic">
-                <option value="organic">Certified Organic?</option>
-                <option>Yes</option>
-              </select>
+              <input
+                type="checkbox"
+                id="organic"
+                value="organic"
+                onChange={function (event) {
+                  setFilterText(event.target.value)
+                }}
+              />
+              <label for="organic">Certified Organic?</label>
             </li>
             <li>
-              <select name="meat" id="meat">
-                <option value="meat">Meat?</option>
-                <option>Yes</option>
-              </select>
+              <li>
+                <input
+                  type="checkbox"
+                  id="meat"
+                  value="meat"
+                  onChange={function (event) {
+                    setFilterText(event.target.value)
+                  }}
+                />
+                <label for="meat">Meat?</label>
+              </li>
             </li>
             <li>
-              <select name="eggs" id="eggs">
-                <option value="eggs">Eggs?</option>
-                <option>Yes</option>
-              </select>
+              <input
+                type="checkbox"
+                id="eggs"
+                value="eggs"
+                onChange={function (event) {
+                  setFilterText(event.target.value)
+                }}
+              />
+              <label for="eggs">Eggs?</label>
             </li>
             <li>
-              <select name="dairy" id="dairy">
-                <option value="dairy">Dairy?</option>
-                <option>Yes</option>
-              </select>
+              <input
+                type="checkbox"
+                id="dairy"
+                value="dairy"
+                onChange={function (event) {
+                  setFilterText(event.target.value)
+                }}
+              />
+              <label for="dairy">Dairy?</label>
             </li>
           </ul>
         </ul>
@@ -91,7 +113,7 @@ export function ViewFarms() {
               </Link>
 
               <p>{farm.address}</p>
-              <p>Farm City</p>
+              <p>{farm.city}</p>
             </li>
             // <img
             //   className="farmlistimage"

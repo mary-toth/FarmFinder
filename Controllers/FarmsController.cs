@@ -35,16 +35,33 @@ namespace FarmFinder.Controllers
         {
             // Uses the database context in `_context` to request all of the Farms, sort
             // them by row id and return them as a JSON array.
+
+
             if (filter == null)
             {
                 return await _context.Farms.OrderBy(row => row.Id).ToListAsync();
 
+
             }
             else
             {
-                //use the filter:
-                return await _context.Farms.Where(farm => farm.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
+                switch (filter)
+                {
+                    case "organic":
+                        return await _context.Farms.Where(farm => farm.Organic == true).ToListAsync();
+                    case "meat":
+                        return await _context.Farms.Where(farm => farm.Meat == true).ToListAsync();
+                    case "eggs":
+                        return await _context.Farms.Where(farm => farm.Eggs == true).ToListAsync();
+                    case "dairy":
+                        return await _context.Farms.Where(farm => farm.Dairy == true).ToListAsync();
+
+                    default:
+                        return await _context.Farms.Where(farm => farm.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
+                }
+
             }
+
         }
 
 

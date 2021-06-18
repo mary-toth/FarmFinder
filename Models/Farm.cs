@@ -17,12 +17,4 @@ namespace FarmFinder.Models
         public bool Dairy { get; set; }
     }
 }
-//string Name *Required
-// string Address *Required
-// string City
-// string Phone
-// string Description
-// bool Certified Organic?
-// bool Meat?
-// bool Eggs?
-// bool Dairy?
+
