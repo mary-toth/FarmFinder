@@ -37,19 +37,19 @@ export function ViewFarms() {
               }}
             ></input>
           </li>
+          <li>
+            <select name="city" className="city">
+              <option value="city">City (choose one)</option>
+              <option value="tampa">Tampa</option>
+              <option value="stpete">St. Pete</option>
+              <option value="riverview">Riverview</option>
+            </select>
+          </li>
           <ul className="filter">
-            <li>
-              <select name="city" id="city">
-                <option value="city">City (choose one)</option>
-                <option value="tampa">Tampa</option>
-                <option value="stpete">St. Pete</option>
-                <option value="riverview">Riverview</option>
-              </select>
-            </li>
             <li>
               <input
                 type="checkbox"
-                id="organic"
+                className="organic"
                 value="organic"
                 onChange={function (event) {
                   setFilterText(event.target.value)
@@ -61,7 +61,7 @@ export function ViewFarms() {
               <li>
                 <input
                   type="checkbox"
-                  id="meat"
+                  className="meat"
                   value="meat"
                   onChange={function (event) {
                     setFilterText(event.target.value)
@@ -73,7 +73,7 @@ export function ViewFarms() {
             <li>
               <input
                 type="checkbox"
-                id="eggs"
+                className="eggs"
                 value="eggs"
                 onChange={function (event) {
                   setFilterText(event.target.value)
@@ -84,7 +84,7 @@ export function ViewFarms() {
             <li>
               <input
                 type="checkbox"
-                id="dairy"
+                className="dairy"
                 value="dairy"
                 onChange={function (event) {
                   setFilterText(event.target.value)

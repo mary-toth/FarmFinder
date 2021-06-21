@@ -114,14 +114,12 @@ ul.filterbar {
 }
 .search-farms {
   padding: 10px;
-  width: 200px;
-  margin-bottom: -10px;
   border: none;
 }
+
 h4 {
   color: rgb(95, 81, 74);
   background-color: rgba(255, 255, 255, 0.8);
-  // border-radius: 1rem;
   font-size: 30px;
   padding: 15px;
   margin-bottom: 5px;
@@ -132,21 +130,33 @@ ul.filter {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 10px;
-  margin-left: -40px;
-}
-select {
-  padding: 5px;
-  color: rgb(80, 72, 65);
-  margin-right: 5px;
-  margin-top: 5px;
-  font-family: 'Open Sans', sans-serif;
-  // border: none;
+
+  // margin: 30px;
+  //   //   margin-left: -40px;
+  color: rgb(95, 81, 74);
+  // background-color: rgba(255, 255, 255, 0.8);
+  // border: solid white;
+  padding: 4px;
+  margin-left: -10px;
 }
 
-label {
+.city {
+  margin-top: 5px;
+  color: rgb(95, 81, 74);
+}
+.organic,
+.meat,
+.eggs,
+.dairy {
+  margin-top: 15px;
+  margin-right: 7px;
+}
+
+label,
+.city {
   background-color: white;
   padding: 5px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 p.farm-name {
