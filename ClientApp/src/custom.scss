@@ -15,7 +15,6 @@ body {
 
 header {
   padding: 10px;
-  // border-bottom: thin solid rgb(148, 133, 120);
 }
 h2.name {
   color: rgb(80, 72, 65);
@@ -91,7 +90,8 @@ div.body {
 footer {
   font-size: 14px;
   padding: 10px;
-  // position: fixed;
+  color: white;
+  text-align: center;
   bottom: 0;
   left: 0;
   right: 0;
@@ -148,9 +148,10 @@ label {
   background-color: white;
   padding: 5px;
 }
-a.farmName {
+
+p.farm-name {
   font-size: 20px;
-  text-align: center;
+  border: none;
 }
 ul.farmlist {
   display: flex;
@@ -229,27 +230,33 @@ button.submit {
 
 // farm detail page *************************************
 
+div.head {
+  background-color: rgb(225, 236, 225);
+  padding: 70px;
+  background-image: url('https://images.pexels.com/photos/4054850/pexels-photo-4054850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 nav.details {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // border: solid rgb(148, 133, 120);
+  border: solid rgb(148, 133, 120);
   border-radius: 3rem;
-  margin: 20px;
-  padding: 10px;
+  margin: 30px;
+  // padding: 10px;
 }
 li.farm-detail-name {
-  font-size: 20px;
+  font-size: 25px;
   list-style: none;
   text-align: center;
   padding: 10px;
   margin: 10px;
-  background-color: rgb(194, 229, 194);
+  // background-color: rgb(194, 229, 194);
   border-radius: 1rem;
 }
-// div.farm-detail-info {
-//   border: solid rgb(161, 147, 134);
-// }
+
 ul.details {
   border-radius: 3rem;
   list-style: none;
@@ -267,11 +274,51 @@ img {
   font-size: 16px;
 }
 p.farm-detail-txt {
-  border: solid rgb(161, 147, 134);
-  padding: 10px;
+  color: rgb(90, 80, 70);
+  // border: solid rgb(161, 147, 134);
+  padding: 20px;
+  margin: 25px;
   border-radius: 2rem;
 }
 .farm-detail-info li {
   margin: 10px;
   padding: 5px;
+}
+
+button.website {
+  font-size: 18px;
+  padding: 15px;
+  margin: 20px;
+  margin-bottom: 0px;
+  border-radius: 3rem;
+  border: none;
+  background-color: rgb(200, 219, 200);
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  color: rgb(90, 80, 70);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left {
+  font-size: 14px;
+
+  color: rgb(211, 201, 198);
+  border: thin solid rgb(199, 184, 177);
+  padding: 5px;
+  border-radius: 1rem;
+  margin: 1.5rem;
+}
+.footer-list {
+  display: flex;
+  list-style: none;
+}
+
+img.icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

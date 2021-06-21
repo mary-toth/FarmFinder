@@ -108,7 +108,9 @@ export function ViewFarms() {
                   }
                 ></img>
               </p>
-              <Link to={`/farms/${farm.id}`}>{farm.name}</Link>
+              <p className="farm-name">
+                <Link to={`/farms/${farm.id}`}>{farm.name}</Link>
+              </p>
 
               <p>{farm.address}</p>
               <p>{farm.city}</p>
