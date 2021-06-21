@@ -22,7 +22,7 @@ export function App() {
         <Route exact path="/addfarm">
           <AddFarm />
         </Route>
-        <Route exact path="/farmdetails">
+        <Route exact path="/Farms/:id">
           <FarmDetails />
         </Route>
         <Route path="*">Not Found</Route>

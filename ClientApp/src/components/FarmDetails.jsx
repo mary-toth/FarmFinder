@@ -1,9 +1,33 @@
-import React from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
-import { Footer } from './Footer'
-import { Header } from './Header'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 export function FarmDetails() {
+  const params = useParams()
+  const id = params.id
+  const [farmInfo, setFarmInfo] = useState({
+    id: undefined,
+    name: '',
+    address: '',
+    city: '',
+    phone: '',
+    description: '',
+    organic: '',
+    meat: '',
+    eggs: '',
+    dairy: '',
+  })
+
+  useState(() => {
+    const fetchFarm = async () => {
+      const response = await fetch(`/api/Farms/${id}`)
+      const apiData = await response.json()
+
+      setFarmInfo(apiData)
+    }
+
+    fetchFarm()
+  }, [id])
+
   return (
     <>
       <nav className="details">
@@ -15,20 +39,14 @@ export function FarmDetails() {
               }
             ></img>
           </li>
-          <li className="farm-detail-name">Meacham Urban Farm</li>
+          <li className="farm-detail-name">{farmInfo.name}</li>
 
-          <p className="farm-detail-txt">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Asperiores, numquam aspernatur? Eaque, dicta quaerat tempore odio
-            nesciunt sapiente. Sint praesentium eius perspiciatis itaque odio et
-            dicta nobis. Dolorum, ab dignissimos?
-          </p>
+          <p className="farm-detail-txt">{farmInfo.description}</p>
           <div className="farm-detail-info">
-            <li>Address: 123 Main St</li>
-            <li>Phone: 123-456-7890</li>
-            <li>Certified Organic</li>
-            <li>Sells Meat: Yes</li>
-            <li>Sells Eggs: Yes</li>
+            <li>Address: {farmInfo.address}</li>
+            <li>City: {farmInfo.city}</li>
+            <li>Phone: {farmInfo.phone}</li>
+            <li>Organic? {farmInfo.organic}</li>
           </div>
         </ul>
       </nav>
