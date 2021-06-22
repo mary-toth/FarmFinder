@@ -47,15 +47,29 @@ namespace FarmFinder.Controllers
             {
                 switch (filter)
                 {
+
+                    case "tampa":
+                        return await _context.Farms.Where(farm => farm.City == "Tampa").ToListAsync();
+                    case "st. pete":
+                        return await _context.Farms.Where(farm => farm.City == "St. Pete").ToListAsync();
+                    case "riverview":
+                        return await _context.Farms.Where(farm => farm.City == "Riverview").ToListAsync();
+
+                    //show organic farms only
                     case "organic":
                         return await _context.Farms.Where(farm => farm.Organic == true).ToListAsync();
+                    //show farms with meat only
                     case "meat":
                         return await _context.Farms.Where(farm => farm.Meat == true).ToListAsync();
+                    //show farms with eggs only
                     case "eggs":
                         return await _context.Farms.Where(farm => farm.Eggs == true).ToListAsync();
+                    //show farms with dairy only
                     case "dairy":
                         return await _context.Farms.Where(farm => farm.Dairy == true).ToListAsync();
 
+
+                    //show all farms
                     default:
                         return await _context.Farms.Where(farm => farm.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
                 }

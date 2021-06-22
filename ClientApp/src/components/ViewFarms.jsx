@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom'
 
 export function ViewFarms() {
   const [farms, setFarms] = useState([])
-  const [filterText, setFilterText] = useState('')
+  const [filter, setFilter] = useState('')
+  // const [organic, setOrganic] = useState('')
+  // const [meat, setMeat] = useState('')
+  // const [eggs, setEggs] = useState('')
+  // const [dairy, setDairy] = useState('')
 
   useEffect(() => {
     async function loadFarms() {
       const url =
-        filterText.length === 0
-          ? '/api/Farms'
-          : `/api/Farms?filter=${filterText}`
+        filter.length === 0 ? '/api/Farms' : `/api/Farms?filter=${filter}`
       const response = await fetch(url)
 
       if (response.ok) {
@@ -19,7 +21,7 @@ export function ViewFarms() {
       }
     }
     loadFarms()
-  }, [filterText])
+  }, [filter])
 
   return (
     <>
@@ -31,17 +33,23 @@ export function ViewFarms() {
               type="text"
               className="search-farms"
               placeholder="search by farm name"
-              value={filterText}
+              value={filter}
               onChange={function (event) {
-                setFilterText(event.target.value)
+                setFilter(event.target.value)
               }}
             ></input>
           </li>
           <li>
-            <select name="city" className="city">
+            <select
+              name="city"
+              className="city"
+              onChange={function (event) {
+                setFilter(event.target.value)
+              }}
+            >
               <option value="city">City (choose one)</option>
               <option value="tampa">Tampa</option>
-              <option value="stpete">St. Pete</option>
+              <option value="st. pete">St. Pete</option>
               <option value="riverview">Riverview</option>
             </select>
           </li>
@@ -52,7 +60,7 @@ export function ViewFarms() {
                 className="organic"
                 value="organic"
                 onChange={function (event) {
-                  setFilterText(event.target.value)
+                  setFilter(event.target.value)
                 }}
               />
               <label for="organic">Certified Organic?</label>
@@ -64,7 +72,7 @@ export function ViewFarms() {
                   className="meat"
                   value="meat"
                   onChange={function (event) {
-                    setFilterText(event.target.value)
+                    setFilter(event.target.value)
                   }}
                 />
                 <label for="meat">Meat?</label>
@@ -76,7 +84,7 @@ export function ViewFarms() {
                 className="eggs"
                 value="eggs"
                 onChange={function (event) {
-                  setFilterText(event.target.value)
+                  setFilter(event.target.value)
                 }}
               />
               <label for="eggs">Eggs?</label>
@@ -87,7 +95,7 @@ export function ViewFarms() {
                 className="dairy"
                 value="dairy"
                 onChange={function (event) {
-                  setFilterText(event.target.value)
+                  setFilter(event.target.value)
                 }}
               />
               <label for="dairy">Dairy?</label>
