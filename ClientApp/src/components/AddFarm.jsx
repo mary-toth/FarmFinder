@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
-import { Footer } from './Footer'
-import { Header } from './Header'
+import React, { useState, useHistory } from 'react'
 
 export function AddFarm() {
+  // const history = useHistory()
+
   const [newFarm, setNewFarm] = useState({
     name: '',
     address: '',
@@ -18,12 +17,13 @@ export function AddFarm() {
   })
 
   function handleStringFieldChange(event) {
-    const newAddressText = event.target.value
+    const value = event.target.value
     const fieldName = event.target.name
 
-    const newerFarm = { ...newFarm, [fieldName]: newAddressText }
+    const newerFarm = { ...newFarm, [fieldName]: value }
     setNewFarm(newerFarm)
   }
+
 
   function handleBooleanFieldChange(event) {
     const newBoolean = event.target.checked
@@ -35,13 +35,14 @@ export function AddFarm() {
 
   async function handleFormSubmit(event) {
     event.preventDefault()
+
     const response = await fetch('/api/Farms', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newFarm),
     })
     if (response.code === 201) {
-      console.log('it worked')
+      // history.push('/')
     }
   }
 
@@ -78,7 +79,12 @@ export function AddFarm() {
           </li>
           <li>
             <label htmlFor="city">City</label>
-            <select name="city" className="city">
+            <select
+              name="city"
+              className="city"
+              value="city"
+              onChange={handleStringFieldChange}
+            >
               <option value="tampa">Tampa</option>
               <option value="stpete">St. Pete</option>
               <option value="riverview">Riverview</option>
@@ -168,8 +174,7 @@ export function AddFarm() {
             </select>
           </li>
           <li>
-            {/* make this button an input. input type=submit */}
-            <button type="submit" className="submit">
+            <button type="submit" className="submit" onClick={handleFormSubmit}>
               Submit
             </button>
           </li>
