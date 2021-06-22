@@ -7,10 +7,10 @@ export function Footer() {
         <h2 className="footer-left">made by mary toth 2021</h2>
         <ul className="footer-list">
           <li className="icon">
-            <img
+            {/* <img
               className="icon"
               src="https://i.pinimg.com/originals/48/e0/73/48e07378e01dd719c060c1f2f2b5cb00.png"
-            ></img>
+            ></img> */}
           </li>
           <li className="icon">
             <img

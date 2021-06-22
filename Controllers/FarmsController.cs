@@ -46,7 +46,10 @@ namespace FarmFinder.Controllers
             else
             {
                 switch (filter)
-                {
+                {   
+                    //show all farms if no city is selected
+                    case "city":
+                        return await _context.Farms.OrderBy(row => row.Id).ToListAsync();
 
                     case "tampa":
                         return await _context.Farms.Where(farm => farm.City == "Tampa").ToListAsync();
@@ -55,16 +58,12 @@ namespace FarmFinder.Controllers
                     case "riverview":
                         return await _context.Farms.Where(farm => farm.City == "Riverview").ToListAsync();
 
-                    //show organic farms only
                     case "organic":
                         return await _context.Farms.Where(farm => farm.Organic == true).ToListAsync();
-                    //show farms with meat only
                     case "meat":
                         return await _context.Farms.Where(farm => farm.Meat == true).ToListAsync();
-                    //show farms with eggs only
                     case "eggs":
                         return await _context.Farms.Where(farm => farm.Eggs == true).ToListAsync();
-                    //show farms with dairy only
                     case "dairy":
                         return await _context.Farms.Where(farm => farm.Dairy == true).ToListAsync();
 

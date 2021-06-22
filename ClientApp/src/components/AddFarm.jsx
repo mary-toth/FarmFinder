@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import { Footer } from './Footer'
 import { Header } from './Header'
 
 export function AddFarm() {
+  const [newFarm, setNewFarm] = useState({
+    name: '',
+    address: '',
+    city: '',
+    description: '',
+    phone: '',
+    website: '',
+    organic: '',
+    meat: '',
+    eggs: '',
+    dairy: '',
+  })
+
+  function handleStringFieldChange(event) {
+    const newAddressText = event.target.value
+    const fieldName = event.target.name
+
+    const newerFarm = { ...newFarm, [fieldName]: newAddressText }
+    setNewFarm(newerFarm)
+  }
   return (
     <>
       <div className="add-farm-msg"></div>
@@ -15,14 +35,24 @@ export function AddFarm() {
 
           <li>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" placeholder="Enter the farm's name" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={newFarm.name}
+              placeholder="Enter the farm's name"
+              onChange={handleStringFieldChange}
+            />
           </li>
           <li>
             <label htmlFor="address">Address</label>
             <input
               type="text"
+              name="address"
+              value={newFarm.address}
               id="address"
               placeholder="Enter the farm's address"
+              onChange={handleStringFieldChange}
             />
           </li>
           <li>
@@ -34,10 +64,26 @@ export function AddFarm() {
             </select>
           </li>
           <li>
+            <label htmlFor="phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              value={newFarm.phone}
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+              placeholder="XXX-XXX-XXXX"
+              onChange={handleStringFieldChange}
+            />
+          </li>
+          <li>
             <label htmlFor="description">Description</label>
             <textarea
+              name="description"
               id="description"
+              value={newFarm.description}
               placeholder="Enter a description of the farm"
+              onChange={handleStringFieldChange}
             ></textarea>
           </li>
 
@@ -45,8 +91,11 @@ export function AddFarm() {
             <label htmlFor="website">Website</label>
             <input
               type="text"
+              name="website"
               id="website"
-              placeholder="Enter the farm's website URL"
+              value={newFarm.website}
+              placeholder="www.website.com"
+              onChange={handleStringFieldChange}
             />
           </li>
           <li>

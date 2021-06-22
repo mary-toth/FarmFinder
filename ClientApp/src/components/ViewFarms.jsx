@@ -33,7 +33,7 @@ export function ViewFarms() {
               type="text"
               className="search-farms"
               placeholder="search by farm name"
-              value={filter}
+              // value={filter}
               onChange={function (event) {
                 setFilter(event.target.value)
               }}
