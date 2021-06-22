@@ -33,11 +33,23 @@ export function AddFarm() {
     setNewFarm(newerFarm)
   }
 
+  async function handleFormSubmit(event) {
+    event.preventDefault()
+    const response = await fetch('/api/Farms', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newFarm),
+    })
+    if (response.code === 201) {
+      console.log('it worked')
+    }
+  }
+
   return (
     <>
       <div className="add-farm-msg"></div>
 
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <ul className="flex-outer">
           <li className="add-farm-txt">Add a Farm</li>
           <li> Fill out the form below to add a farm to the database.</li>
