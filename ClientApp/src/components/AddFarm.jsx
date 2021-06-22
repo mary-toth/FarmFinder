@@ -11,10 +11,10 @@ export function AddFarm() {
     description: '',
     phone: '',
     website: '',
-    organic: '',
-    meat: '',
-    eggs: '',
-    dairy: '',
+    organic: false,
+    meat: false,
+    eggs: false,
+    dairy: false,
   })
 
   function handleStringFieldChange(event) {
@@ -24,6 +24,15 @@ export function AddFarm() {
     const newerFarm = { ...newFarm, [fieldName]: newAddressText }
     setNewFarm(newerFarm)
   }
+
+  function handleBooleanFieldChange(event) {
+    const newBoolean = event.target.checked
+    const fieldName = event.target.name
+
+    const newerFarm = { ...newFarm, [fieldName]: newBoolean }
+    setNewFarm(newerFarm)
+  }
+
   return (
     <>
       <div className="add-farm-msg"></div>
@@ -100,28 +109,48 @@ export function AddFarm() {
           </li>
           <li>
             <label htmlFor="organic">Certified Organic?</label>
-            <select name="organic" className="organic">
+            <select
+              name="organic"
+              className="organic"
+              value={newFarm.organic}
+              onChange={handleBooleanFieldChange}
+            >
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
           </li>
           <li>
             <label htmlFor="meat">Sells meat?</label>
-            <select name="meat" className="meat">
+            <select
+              name="meat"
+              className="meat"
+              value={newFarm.meat}
+              onChange={handleBooleanFieldChange}
+            >
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
           </li>
           <li>
             <label htmlFor="eggs">Sells eggs?</label>
-            <select name="eggs" className="eggs">
+            <select
+              name="eggs"
+              className="eggs"
+              value={newFarm.eggs}
+              onChange={handleBooleanFieldChange}
+            >
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
           </li>
           <li>
             <label htmlFor="dairy">Sells dairy?</label>
-            <select name="dairy" className="dairy">
+            <select
+              name="dairy"
+              className="dairy"
+              value={newFarm.dairy}
+              onChange={handleBooleanFieldChange}
+            >
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
