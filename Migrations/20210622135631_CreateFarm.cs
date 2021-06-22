@@ -18,6 +18,7 @@ namespace FarmFinder.Migrations
                     City = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true),
                     Phone = table.Column<string>(type: "text", nullable: true),
+                    Website = table.Column<string>(type: "text", nullable: true),
                     Organic = table.Column<bool>(type: "boolean", nullable: false),
                     Meat = table.Column<bool>(type: "boolean", nullable: false),
                     Eggs = table.Column<bool>(type: "boolean", nullable: false),

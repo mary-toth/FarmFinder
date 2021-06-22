@@ -7,7 +7,9 @@ export function Header() {
       <div className="dot">.</div>
 
       <header>
-        <h2 className="name"> Farm Finder</h2>
+        <h2 className="name">
+          <Link to="/">Farm Finder</Link>
+        </h2>
         <nav>
           <ul className="nav_links">
             <li>

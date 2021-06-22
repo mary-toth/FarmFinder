@@ -42,19 +42,12 @@ export function FarmDetails() {
           </li>
           <li className="farm-detail-name">{farmInfo.name}</li>
 
-          <p className="farm-detail-txt">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-            rerum quae. Deserunt, error saepe corrupti quibusdam magni
-            voluptatem dignissimos dolorum iusto sunt, quam, possimus tempore
-            earum. Maiores eveniet minima perspiciatis!
-          </p>
+          <p className="farm-detail-txt">{farmInfo.description}</p>
           <div className="farm-detail-info">
             <li>Address: {farmInfo.address}</li>
             <li>City: {farmInfo.city}</li>
             <li>Phone: {farmInfo.phone}</li>
-            <button className="website">
-              Click here to visit their website!
-            </button>
+            <button className="website">{farmInfo.website}</button>
             {/* <li className="website">Click HERE to visit their website!</li> */}
             {/* <li>Organic? {farmInfo.organic}</li> */}
           </div>

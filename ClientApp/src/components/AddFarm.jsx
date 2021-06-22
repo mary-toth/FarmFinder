@@ -27,7 +27,7 @@ export function AddFarm() {
           </li>
           <li>
             <label htmlFor="city">City</label>
-            <select name="city" id="city">
+            <select name="city" className="city">
               <option value="tampa">Tampa</option>
               <option value="stpete">St. Pete</option>
               <option value="riverview">Riverview</option>
@@ -40,30 +40,39 @@ export function AddFarm() {
               placeholder="Enter a description of the farm"
             ></textarea>
           </li>
+
+          <li>
+            <label htmlFor="website">Website</label>
+            <input
+              type="text"
+              id="website"
+              placeholder="Enter the farm's website URL"
+            />
+          </li>
           <li>
             <label htmlFor="organic">Certified Organic?</label>
-            <select name="organic" id="organic">
+            <select name="organic" className="organic">
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
           </li>
           <li>
             <label htmlFor="meat">Sells meat?</label>
-            <select name="meat" id="meat">
+            <select name="meat" className="meat">
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
           </li>
           <li>
             <label htmlFor="eggs">Sells eggs?</label>
-            <select name="eggs" id="eggs">
+            <select name="eggs" className="eggs">
               <option>Choose an option</option>
               <option>Yes</option>
             </select>
           </li>
           <li>
-            <label htmlFor="dairy">Sells milk?</label>
-            <select name="milk" id="milk">
+            <label htmlFor="dairy">Sells dairy?</label>
+            <select name="dairy" className="dairy">
               <option>Choose an option</option>
               <option>Yes</option>
             </select>

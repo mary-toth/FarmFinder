@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FarmFinder.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210617164636_CreateFarm")]
+    [Migration("20210622135631_CreateFarm")]
     partial class CreateFarm
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,9 @@ namespace FarmFinder.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Phone")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Website")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

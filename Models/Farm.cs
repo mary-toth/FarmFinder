@@ -11,6 +11,7 @@ namespace FarmFinder.Models
         public string City { get; set; }
         public string Description { get; set; }
         public string Phone { get; set; }
+        public string Website { get; set; }
         public bool Organic { get; set; }
         public bool Meat { get; set; }
         public bool Eggs { get; set; }

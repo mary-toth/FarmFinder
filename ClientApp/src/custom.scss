@@ -115,6 +115,7 @@ ul.filterbar {
 .search-farms {
   padding: 10px;
   border: none;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h4 {
@@ -130,14 +131,9 @@ ul.filter {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-
-  // margin: 30px;
-  //   //   margin-left: -40px;
   color: rgb(95, 81, 74);
-  // background-color: rgba(255, 255, 255, 0.8);
-  // border: solid white;
   padding: 4px;
-  margin-left: -10px;
+  margin-left: -6px;
 }
 
 .city {
@@ -150,6 +146,7 @@ ul.filter {
 .dairy {
   margin-top: 15px;
   margin-right: 7px;
+  margin-bottom: 10px;
 }
 
 label,
@@ -220,22 +217,32 @@ li.add-farm-txt {
 }
 
 #name,
-#address {
+#address,
+#website {
   padding: 10px;
   margin-top: 10px;
   font-family: 'Open Sans', sans-serif;
 }
 #description {
+  padding: 5px;
   height: 100px;
   font-family: 'Open Sans', sans-serif;
 }
 
+select.organic,
+.meat,
+.eggs,
+.dairy {
+  padding: 10px;
+  color: rgb(75, 64, 59);
+}
 button.submit {
   border-radius: 1rem;
   border: none;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  color: rgb(75, 64, 59);
 }
 
 // farm detail page *************************************
@@ -316,7 +323,7 @@ footer {
   font-size: 14px;
 
   color: rgb(211, 201, 198);
-  border: thin solid rgb(199, 184, 177);
+  // border: thin solid rgb(199, 184, 177);
   padding: 5px;
   border-radius: 1rem;
   margin: 1.5rem;
