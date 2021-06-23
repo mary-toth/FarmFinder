@@ -81,18 +81,12 @@ export function AddFarm() {
             <select
               name="city"
               className="city"
-              value={newFarm.city}
+              // value={newFarm.city}
               onChange={handleStringFieldChange}
             >
-              <option value={newFarm.city} name="tampa">
-                Tampa
-              </option>
-              <option value={newFarm.city} name="st. pete">
-                St. Pete
-              </option>
-              <option value={newFarm.city} name="riverview">
-                Riverview
-              </option>
+              <option value="Tampa">Tampa</option>
+              <option value="St. Pete">St. Pete</option>
+              <option value="Riverview">Riverview</option>
             </select>
           </li>
           <li>
@@ -130,21 +124,27 @@ export function AddFarm() {
               onChange={handleStringFieldChange}
             />
           </li>
-          <li>
-            <label htmlFor="organic">Certified Organic?</label>
-            <select
+          <section className="boolean-form">
+            <li>
+              <label htmlFor="organic">Certified Organic?</label>
+              {/* <select
               name="organic"
               className="organic"
               value={newFarm.organic}
               onChange={handleBooleanFieldChange}
-            >
-              <option>Choose an option</option>
-              <option>Yes</option>
-            </select>
-          </li>
-          <li>
-            <label htmlFor="meat">Sells meat?</label>
-            <select
+            > */}
+              {/* <option>Choose an option</option>
+              <option>Yes</option> */}
+              <input
+                type="checkbox"
+                name="organic"
+                onClick={handleBooleanFieldChange}
+              ></input>
+              {/* </select> */}
+            </li>
+            <li>
+              <label htmlFor="meat">Sells meat?</label>
+              {/* <select
               name="meat"
               className="meat"
               value={newFarm.meat}
@@ -152,11 +152,16 @@ export function AddFarm() {
             >
               <option>Choose an option</option>
               <option>Yes</option>
-            </select>
-          </li>
-          <li>
-            <label htmlFor="eggs">Sells eggs?</label>
-            <select
+            </select> */}
+              <input
+                type="checkbox"
+                name="meat"
+                onClick={handleBooleanFieldChange}
+              ></input>
+            </li>
+            <li>
+              <label htmlFor="eggs">Sells eggs?</label>
+              {/* <select
               name="eggs"
               className="eggs"
               value={newFarm.eggs}
@@ -164,11 +169,16 @@ export function AddFarm() {
             >
               <option>Choose an option</option>
               <option>Yes</option>
-            </select>
-          </li>
-          <li>
-            <label htmlFor="dairy">Sells dairy?</label>
-            <select
+            </select> */}
+              <input
+                type="checkbox"
+                name="eggs"
+                onClick={handleBooleanFieldChange}
+              ></input>
+            </li>
+            <li>
+              <label htmlFor="dairy">Sells dairy?</label>
+              {/* <select
               name="dairy"
               className="dairy"
               value={newFarm.dairy}
@@ -176,8 +186,14 @@ export function AddFarm() {
             >
               <option>Choose an option</option>
               <option>Yes</option>
-            </select>
-          </li>
+            </select> */}
+              <input
+                type="checkbox"
+                name="dairy"
+                onClick={handleBooleanFieldChange}
+              ></input>
+            </li>
+          </section>
           <li>
             <button type="submit" className="submit" onClick={handleFormSubmit}>
               Submit

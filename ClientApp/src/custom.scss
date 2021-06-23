@@ -229,6 +229,10 @@ li.add-farm-txt {
   font-size: 23px;
 }
 
+section.boolean-form {
+  display: flex;
+  // border: thin solid;
+}
 #name,
 #address,
 #website,
@@ -257,6 +261,7 @@ button.submit {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: rgb(75, 64, 59);
+  cursor: pointer;
 }
 
 // farm detail page *************************************

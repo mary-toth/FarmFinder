@@ -153,7 +153,8 @@ export function ViewFarms() {
               onChange={function (event) {
                 setFilter(event.target.value)
               }}
-            ></input>
+            ></input>{' '}
+            OR
           </li>
           <li>
             <select

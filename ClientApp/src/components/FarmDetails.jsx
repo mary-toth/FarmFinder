@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 import { useParams } from 'react-router-dom'
 
 export function FarmDetails() {
@@ -47,7 +49,9 @@ export function FarmDetails() {
             <li>Address: {farmInfo.address}</li>
             <li>City: {farmInfo.city}</li>
             <li>Phone: {farmInfo.phone}</li>
-            <button className="website">{farmInfo.website}</button>
+            <button className="website">
+              Click here to visit their website!
+            </button>
             {/* <li className="website">Click HERE to visit their website!</li> */}
             {/* <li>Organic? {farmInfo.organic}</li> */}
           </div>
