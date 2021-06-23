@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 export function ViewFarms() {
   const [farms, setFarms] = useState([])
   const [filter, setFilter] = useState('')
-  // const [organic, setOrganic] = useState('')
-  // const [meat, setMeat] = useState('')
-  // const [eggs, setEggs] = useState('')
-  // const [dairy, setDairy] = useState('')
+  const [isOrganicChecked, setIsOrganicChecked] = useState(true)
+  const [isMeatChecked, setIsMeatChecked] = useState(true)
+  const [isEggsChecked, setIsEggsChecked] = useState(true)
+  const [isDairyChecked, setIsDairyChecked] = useState(true)
+
+  const history = useHistory()
 
   useEffect(() => {
     async function loadFarms() {
@@ -23,11 +25,125 @@ export function ViewFarms() {
     loadFarms()
   }, [filter])
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    if (isOrganicChecked && !isMeatChecked && !isEggsChecked && !isDairyChecked)
+      setFilter('o')
+    else if (
+      isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('om')
+    else if (
+      isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('oe')
+    else if (
+      isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('od')
+    else if (
+      isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('ome')
+    else if (
+      isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('omd')
+    else if (
+      isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('omed')
+    else if (
+      !isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('m')
+    else if (
+      !isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('me')
+    else if (
+      !isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('md')
+    else if (
+      !isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('mde')
+    else if (
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('e')
+    else if (
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('ed')
+    else if (
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('d')
+  }
+
+  const handleOrganicChange = () => {
+    setIsOrganicChecked(!isOrganicChecked)
+  }
+
+  const handleMeatChange = () => {
+    setIsMeatChecked(!isMeatChecked)
+  }
+  const handleEggsChange = () => {
+    setIsEggsChecked(!isEggsChecked)
+  }
+  const handleDairyChange = () => {
+    setIsDairyChecked(!isDairyChecked)
+  }
+
   return (
     <>
       <div className="filter">
+        <h4>Find a Farm</h4>
+      </div>
+      <section className="filter-section">
         <ul className="filterbar">
-          <h4>Find a Farm</h4>
           <li>
             <input
               type="text"
@@ -58,10 +174,9 @@ export function ViewFarms() {
               <input
                 type="checkbox"
                 className="organic"
-                value="organic"
-                onChange={function (event) {
-                  setFilter(event.target.value)
-                }}
+                value="o"
+                checked={isOrganicChecked}
+                onChange={handleOrganicChange}
               />
               <label for="organic">Certified Organic?</label>
             </li>
@@ -70,10 +185,9 @@ export function ViewFarms() {
                 <input
                   type="checkbox"
                   className="meat"
-                  value="meat"
-                  onChange={function (event) {
-                    setFilter(event.target.value)
-                  }}
+                  value="m"
+                  checked={isMeatChecked}
+                  onChange={handleMeatChange}
                 />
                 <label for="meat">Meat?</label>
               </li>
@@ -82,10 +196,9 @@ export function ViewFarms() {
               <input
                 type="checkbox"
                 className="eggs"
-                value="eggs"
-                onChange={function (event) {
-                  setFilter(event.target.value)
-                }}
+                value="e"
+                checked={isEggsChecked}
+                onChange={handleEggsChange}
               />
               <label for="eggs">Eggs?</label>
             </li>
@@ -93,16 +206,24 @@ export function ViewFarms() {
               <input
                 type="checkbox"
                 className="dairy"
-                value="dairy"
-                onChange={function (event) {
-                  setFilter(event.target.value)
-                }}
+                value="d"
+                checked={isDairyChecked}
+                onChange={handleDairyChange}
               />
               <label for="dairy">Dairy?</label>
             </li>
+            <li>
+              <button
+                name="list-button"
+                className="list-button"
+                onClick={handleSubmit}
+              >
+                Search
+              </button>
+            </li>
           </ul>
         </ul>
-      </div>
+      </section>
 
       <section>
         <ul className="farmlist">

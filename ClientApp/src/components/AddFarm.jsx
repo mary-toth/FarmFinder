@@ -24,12 +24,11 @@ export function AddFarm() {
     setNewFarm(newerFarm)
   }
 
-
   function handleBooleanFieldChange(event) {
-    const newBoolean = event.target.checked
+    const checked = event.target.checked
     const fieldName = event.target.name
 
-    const newerFarm = { ...newFarm, [fieldName]: newBoolean }
+    const newerFarm = { ...newFarm, [fieldName]: checked }
     setNewFarm(newerFarm)
   }
 
@@ -82,12 +81,18 @@ export function AddFarm() {
             <select
               name="city"
               className="city"
-              value="city"
+              value={newFarm.city}
               onChange={handleStringFieldChange}
             >
-              <option value="tampa">Tampa</option>
-              <option value="stpete">St. Pete</option>
-              <option value="riverview">Riverview</option>
+              <option value={newFarm.city} name="tampa">
+                Tampa
+              </option>
+              <option value={newFarm.city} name="st. pete">
+                St. Pete
+              </option>
+              <option value={newFarm.city} name="riverview">
+                Riverview
+              </option>
             </select>
           </li>
           <li>

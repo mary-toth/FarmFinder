@@ -46,11 +46,10 @@ namespace FarmFinder.Controllers
             else
             {
                 switch (filter)
-                {   
+                {
                     //show all farms if no city is selected
                     case "city":
                         return await _context.Farms.OrderBy(row => row.Id).ToListAsync();
-
                     case "tampa":
                         return await _context.Farms.Where(farm => farm.City == "Tampa").ToListAsync();
                     case "st. pete":
@@ -58,17 +57,34 @@ namespace FarmFinder.Controllers
                     case "riverview":
                         return await _context.Farms.Where(farm => farm.City == "Riverview").ToListAsync();
 
-                    case "organic":
+                    case "o":
                         return await _context.Farms.Where(farm => farm.Organic == true).ToListAsync();
-                    case "meat":
+                    case "om":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true).ToListAsync();
+                    case "oe":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Eggs == true).ToListAsync();
+                    case "od":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Dairy == true).ToListAsync();
+                    case "ome":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true).ToListAsync();
+                    case "omd":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Dairy == true).ToListAsync();
+                    case "omed":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true && farm.Dairy == true).ToListAsync();
+                    case "m":
                         return await _context.Farms.Where(farm => farm.Meat == true).ToListAsync();
-                    case "eggs":
+                    case "me":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Eggs == true).ToListAsync();
+                    case "md":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true).ToListAsync();
+                    case "mde":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true && farm.Eggs == true).ToListAsync();
+                    case "e":
                         return await _context.Farms.Where(farm => farm.Eggs == true).ToListAsync();
-                    case "dairy":
+                    case "ed":
+                        return await _context.Farms.Where(farm => farm.Eggs == true && farm.Dairy == true).ToListAsync();
+                    case "d":
                         return await _context.Farms.Where(farm => farm.Dairy == true).ToListAsync();
-
-
-                    //show all farms
                     default:
                         return await _context.Farms.Where(farm => farm.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
                 }
