@@ -32,29 +32,31 @@ export function FarmDetails() {
 
   return (
     <>
-      <div className="head"></div>
-      <nav className="details">
-        <ul className="details">
-          <li>
+      {/* <div className="head"></div> */}
+
+      <nav className="farm-detail-page">
+        <ul className="farm-info">
+          <li className="farm-info">
+            {' '}
+            <h2 className="name-header">{farmInfo.name}</h2>
+          </li>
+          <li className="farm-info">
             <img
-              src={
-                'https://images.squarespace-cdn.com/content/v1/5ac4165c9d5abb096069c163/1526611351559-0WDGD8E8QRBR9USSYSEY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/IMG_1274.JPG?format=1500w'
-              }
+              className="farm-info"
+              src="https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
           </li>
-          <li className="farm-detail-name">{farmInfo.name}</li>
-
-          <p className="farm-detail-txt">{farmInfo.description}</p>
-          <div className="farm-detail-info">
-            <li>Address: {farmInfo.address}</li>
-            <li>City: {farmInfo.city}</li>
-            <li>Phone: {farmInfo.phone}</li>
+          <li className="farm-info">
+            {farmInfo.address}, {farmInfo.city} FL
+          </li>
+          <li className="farm-info"></li>
+          <li className="farm-info">Phone: {farmInfo.phone}</li>
+          <li className="farm-info-description">{farmInfo.description}</li>
+          <li className="farm-info">
             <button className="website">
               Click here to visit their website!
             </button>
-            {/* <li className="website">Click HERE to visit their website!</li> */}
-            {/* <li>Organic? {farmInfo.organic}</li> */}
-          </div>
+          </li>
         </ul>
       </nav>
     </>

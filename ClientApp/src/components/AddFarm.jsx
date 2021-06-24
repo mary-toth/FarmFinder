@@ -49,7 +49,7 @@ export function AddFarm() {
     <>
       <div className="add-farm-msg"></div>
 
-      <form onSubmit={handleFormSubmit}>
+      <form className="add-farm" onSubmit={handleFormSubmit}>
         <ul className="flex-outer">
           <li className="add-farm-txt">Add a Farm</li>
           <li> Fill out the form below to add a farm to the database.</li>
@@ -81,7 +81,6 @@ export function AddFarm() {
             <select
               name="city"
               className="city"
-              // value={newFarm.city}
               onChange={handleStringFieldChange}
             >
               <option value="Tampa">Tampa</option>
@@ -127,32 +126,16 @@ export function AddFarm() {
           <section className="boolean-form">
             <li>
               <label htmlFor="organic">Certified Organic?</label>
-              {/* <select
-              name="organic"
-              className="organic"
-              value={newFarm.organic}
-              onChange={handleBooleanFieldChange}
-            > */}
-              {/* <option>Choose an option</option>
-              <option>Yes</option> */}
+
               <input
                 type="checkbox"
                 name="organic"
                 onClick={handleBooleanFieldChange}
               ></input>
-              {/* </select> */}
             </li>
             <li>
               <label htmlFor="meat">Sells meat?</label>
-              {/* <select
-              name="meat"
-              className="meat"
-              value={newFarm.meat}
-              onChange={handleBooleanFieldChange}
-            >
-              <option>Choose an option</option>
-              <option>Yes</option>
-            </select> */}
+
               <input
                 type="checkbox"
                 name="meat"
@@ -161,15 +144,6 @@ export function AddFarm() {
             </li>
             <li>
               <label htmlFor="eggs">Sells eggs?</label>
-              {/* <select
-              name="eggs"
-              className="eggs"
-              value={newFarm.eggs}
-              onChange={handleBooleanFieldChange}
-            >
-              <option>Choose an option</option>
-              <option>Yes</option>
-            </select> */}
               <input
                 type="checkbox"
                 name="eggs"
@@ -178,15 +152,7 @@ export function AddFarm() {
             </li>
             <li>
               <label htmlFor="dairy">Sells dairy?</label>
-              {/* <select
-              name="dairy"
-              className="dairy"
-              value={newFarm.dairy}
-              onChange={handleBooleanFieldChange}
-            >
-              <option>Choose an option</option>
-              <option>Yes</option>
-            </select> */}
+
               <input
                 type="checkbox"
                 name="dairy"
