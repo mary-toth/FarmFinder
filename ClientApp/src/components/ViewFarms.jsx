@@ -8,6 +8,9 @@ export function ViewFarms() {
   const [isMeatChecked, setIsMeatChecked] = useState(true)
   const [isEggsChecked, setIsEggsChecked] = useState(true)
   const [isDairyChecked, setIsDairyChecked] = useState(true)
+  // const [isTampaSelected, setIsTampaSelected] = useState('tampa')
+  // const [isStPeteSelected, setIsStPeteSelected] = useState('st. pete')
+  // const [isRiverviewSelected, setIsRiverviewSelected] = useState('riverview')
 
   const history = useHistory()
 
@@ -137,6 +140,15 @@ export function ViewFarms() {
     setIsDairyChecked(!isDairyChecked)
   }
 
+  // const handleTampa = () => {
+  //   setIsTampaSelected(isTampaSelected)
+  // }
+  // const handleStPete = () => {
+  //   setIsStPeteSelected(isStPeteSelected)
+  // }
+  // const handleRiverview = () => {
+  //   setIsRiverviewSelected(isRiverviewSelected)
+  // }
   return (
     <>
       <div className="filter">
@@ -241,9 +253,12 @@ export function ViewFarms() {
               <p className="farm-name">
                 <Link to={`/farms/${farm.id}`}>{farm.name}</Link>
               </p>
-
-              <p>{farm.address}</p>
-              <p>{farm.city}</p>
+              <p className="farm-address">
+                {farm.address}, {farm.city} FL
+              </p>
+              <button className="view">
+                <Link to={`/farms/${farm.id}`}>View Details</Link>
+              </button>
             </li>
             // <img
             //   className="farmlistimage"

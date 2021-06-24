@@ -42,7 +42,7 @@ ul.nav_links li {
   display: inline-block;
   padding: 5px;
   margin-right: 3px;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 div.dot {
@@ -161,8 +161,10 @@ label,
 }
 
 p.farm-name {
-  font-size: 20px;
+  font-size: 22px;
   border: none;
+  margin-top: -10px;
+  max-width: 200px;
 }
 ul.farmlist {
   display: flex;
@@ -176,23 +178,38 @@ ul.farmlist {
   background-color: white;
   text-align: center;
   color: rgb(80, 72, 65);
-  border: 2px solid rgb(148, 133, 120);
 }
 ul.farmlist li {
   margin-bottom: 20px;
+  border: thin solid rgb(202, 194, 191);
+  margin-right: 5px;
+  padding: 20px;
+  border-radius: 3rem;
 }
 
-img {
+img.farm-image {
   width: 200px;
   height: 200px;
+  border-radius: 2rem;
 }
-p {
-  border: thin solid rgb(212, 201, 191);
+p.farm-city,
+.farm-address {
   border-radius: 1rem;
-  padding: 10px;
+  // padding: 10px;
 }
+
 p.farm-image {
   border: none;
+}
+
+button.view {
+  border-radius: 1rem;
+  border: none;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: rgb(75, 64, 59);
+  cursor: pointer;
 }
 
 //add farm page *****************************************************************************
@@ -302,7 +319,7 @@ nav.farm-detail-page {
   flex-wrap: wrap;
   justify-content: center;
   // margin: 20px;
-  background-image: url('https://images.pexels.com/photos/1476091/pexels-photo-1476091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('https://images.pexels.com/photos/1928491/pexels-photo-1928491.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -332,6 +349,7 @@ li.farm-info-description {
   border: thin solid rgb(100, 84, 84);
   // background-color: rgb(189, 209, 189);
   max-width: 600px;
+  line-height: 25px;
 }
 img.farm-info {
   width: 250px;
@@ -354,10 +372,6 @@ button.website {
   color: rgb(255, 255, 255);
 }
 
-// p.website {
-//   color: rgb(95, 81, 74);
-//   background-color: rgba(255, 255, 255, 0.8);
-// }
 //footer ***********************************************************************************
 footer {
   display: flex;
@@ -407,6 +421,9 @@ img.icon {
 
   ul.farm-info {
     margin: 20px;
+  }
+  ul.nav_links a {
+    font-size: 10px;
   }
 }
 @media all and (max-width: 400px) {
