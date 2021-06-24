@@ -32,17 +32,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 2px solid rgb(148, 133, 120);
+}
+.header-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: -20px;
+  margin-top: -20px;
 }
 
-ul.nav_links {
-  list-style: none;
-}
 ul.nav_links li {
   display: inline-block;
   padding: 5px;
   margin-right: 3px;
   font-size: 13px;
+  list-style: none;
 }
 
 div.dot {
@@ -60,9 +63,6 @@ div.hero {
   text-align: center;
   color: white;
   font-size: 1.2rem;
-  // display: flex;
-  // justify-content: center;
-  // flex-direction: column;
 }
 
 h1 {
@@ -81,10 +81,12 @@ button.home {
 }
 
 div.body {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   line-height: 2rem;
   margin: 20px;
-  border: solid rgb(161, 147, 134);
+  border: thin solid rgb(161, 147, 134);
   border-radius: 1rem;
   color: rgb(80, 72, 65);
   padding: 30px;
@@ -338,7 +340,6 @@ ul.farm-info {
 }
 li.farm-info {
   text-align: center;
-  // margin-bottom: 20px;
   margin-top: -5px;
   margin-bottom: 20px;
 }
@@ -347,7 +348,6 @@ li.farm-info-description {
   padding: 20px;
   border-radius: 1rem;
   border: thin solid rgb(100, 84, 84);
-  // background-color: rgb(189, 209, 189);
   max-width: 600px;
   line-height: 25px;
 }
@@ -381,7 +381,6 @@ footer {
 .footer-left {
   font-size: 14px;
   color: rgb(211, 201, 198);
-  // border: thin solid rgb(199, 184, 177);
   padding: 5px;
   border-radius: 1rem;
   margin: 1.5rem;
@@ -424,6 +423,14 @@ img.icon {
   }
   ul.nav_links a {
     font-size: 10px;
+  }
+  .header-icon {
+    width: 60px;
+    height: 60px;
+  }
+  a.farm-finder {
+    color: white;
+    font-size: 1px;
   }
 }
 @media all and (max-width: 400px) {

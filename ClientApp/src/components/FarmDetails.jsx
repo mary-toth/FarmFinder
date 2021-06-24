@@ -51,6 +51,7 @@ export function FarmDetails() {
           </li>
           <li className="farm-info">Phone: {farmInfo.phone}</li>
           <li className="farm-info-description">{farmInfo.description}</li>
+          <li className="farm-info"></li>
           <li className="farm-info">
             <button className="website">
               Click here to visit their website!

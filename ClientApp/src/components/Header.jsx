@@ -8,7 +8,13 @@ export function Header() {
 
       <header>
         <h2 className="name">
-          <Link to="/">Farm Finder</Link>
+          <Link className="farm-finder" to="/">
+            <img
+              className="header-icon"
+              src="https://i2.wp.com/www.farmtoyoudirect.com.au/wp-content/uploads/2020/08/cropped-farmtoyoudirect_icon.png?fit=512%2C512&ssl=1"
+            ></img>
+            Farm Finder
+          </Link>
         </h2>
         <nav>
           <ul className="nav_links">
