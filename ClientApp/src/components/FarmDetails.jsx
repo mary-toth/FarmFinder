@@ -49,7 +49,6 @@ export function FarmDetails() {
           <li className="farm-info">
             {farmInfo.address}, {farmInfo.city} FL
           </li>
-          <li className="farm-info"></li>
           <li className="farm-info">Phone: {farmInfo.phone}</li>
           <li className="farm-info-description">{farmInfo.description}</li>
           <li className="farm-info">

@@ -90,18 +90,6 @@ div.body {
   padding: 30px;
 }
 
-footer {
-  font-size: 14px;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100;
-  background-color: rgb(148, 133, 120);
-}
-
 //view farm page ******************************************************************
 
 div.filter {
@@ -305,23 +293,9 @@ input[type='checkbox']:checked:after {
 
 // farm detail page *************************************
 
-// div.head {
-// padding: 50px;
-// background-image: url('https://images.pexels.com/photos/4054850/pexels-photo-4054850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-// }
 .name-header {
   font-size: 30px;
-  // color: rgb(95, 81, 74);
-  // background-color: rgba(255, 255, 255, 0.8);
-  // padding: 30px;
   margin-bottom: 30px;
-  // margin-bottom: -20px;
 }
 nav.farm-detail-page {
   display: flex;
@@ -342,16 +316,14 @@ ul.farm-info {
   padding: 50px;
   text-align: center;
   background-color: white;
-  // box-shadow: 1px 1px 20px 1px rgb(84, 107, 75);
 
   // border: solid;
 }
 li.farm-info {
   text-align: center;
-  margin-left: -20px;
-  margin: 20px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   margin-top: -5px;
+  margin-bottom: 20px;
 }
 li.farm-info-description {
   border: solid;
@@ -405,6 +377,18 @@ footer {
   list-style: none;
 }
 
+footer {
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100;
+  background-color: rgb(148, 133, 120);
+}
+
 img.icon {
   width: 40px;
   height: 40px;
@@ -419,6 +403,10 @@ img.icon {
 
   section.boolean-form {
     margin-left: -20px;
+  }
+
+  ul.farm-info {
+    margin: 20px;
   }
 }
 @media all and (max-width: 400px) {
