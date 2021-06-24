@@ -6,11 +6,12 @@ export function Home() {
       <div className="hero">
         <h1>Welcome to Farm Finder</h1>
 
-        <h2>Support Local Farmers in Your Area Today</h2>
+        <h2 className="support">Support Local Farmers in Your Area Today</h2>
         <button className="home">
           <Link to="/farms">Find a Farm Near Me</Link>
         </button>
       </div>
+
       <div className="body">
         <h2>Who are we?</h2>
         <div className="bodyText">

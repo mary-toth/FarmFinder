@@ -60,6 +60,9 @@ div.hero {
   text-align: center;
   color: white;
   font-size: 1.2rem;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
 }
 
 h1 {
@@ -205,28 +208,23 @@ p.farm-image {
 }
 
 //add farm page *****************************************************************************
-div.add-farm-msg {
-  background-color: rgb(225, 236, 225);
-  background-image: url('https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 80px;
-}
 
 form.add-farm {
   display: flex;
   justify-content: center;
+  background-image: url('https://images.pexels.com/photos/841303/pexels-photo-841303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 ul.flex-outer {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 50px;
-  border: solid rgb(161, 147, 134);
   border-radius: 2rem;
-  // margin: 20px;
   margin: 20px;
+  background-color: white;
 }
 
 ul.flex-outer li {
@@ -359,7 +357,8 @@ li.farm-info-description {
   border: solid;
   padding: 20px;
   border-radius: 1rem;
-  border: thin solid rgb(117, 138, 112);
+  border: thin solid rgb(100, 84, 84);
+  // background-color: rgb(189, 209, 189);
   max-width: 600px;
 }
 img.farm-info {
@@ -370,17 +369,23 @@ img.farm-info {
 
 button.website {
   font-size: 18px;
-  padding: 15px;
+  padding: 25px;
   margin: 20px;
   margin-bottom: 0px;
   border-radius: 3rem;
   border: none;
-  background-color: rgb(200, 219, 200);
+  background-color: rgb(179, 190, 173);
   font-family: 'Open Sans', sans-serif;
   cursor: pointer;
-  color: rgb(90, 80, 70);
+  color: rgb(95, 81, 74);
+  background-color: rgba(150, 167, 153, 0.8);
+  color: rgb(255, 255, 255);
 }
 
+// p.website {
+//   color: rgb(95, 81, 74);
+//   background-color: rgba(255, 255, 255, 0.8);
+// }
 //footer ***********************************************************************************
 footer {
   display: flex;
@@ -405,4 +410,25 @@ img.icon {
   height: 40px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media all and (max-width: 500px) {
+  ul.flex-outer {
+    min-width: 250px;
+  }
+
+  section.boolean-form {
+    margin-left: -20px;
+  }
+}
+@media all and (max-width: 400px) {
+  h1 {
+    width: 190px;
+    margin: -30px;
+    margin-bottom: 10px;
+  }
+
+  ul.nav_links {
+    width: 200px;
+  }
 }
