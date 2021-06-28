@@ -4,10 +4,10 @@ import { Link, useHistory } from 'react-router-dom'
 export function ViewFarms() {
   const [farms, setFarms] = useState([])
   const [filter, setFilter] = useState('')
-  const [isOrganicChecked, setIsOrganicChecked] = useState(true)
-  const [isMeatChecked, setIsMeatChecked] = useState(true)
-  const [isEggsChecked, setIsEggsChecked] = useState(true)
-  const [isDairyChecked, setIsDairyChecked] = useState(true)
+  const [isOrganicChecked, setIsOrganicChecked] = useState(false)
+  const [isMeatChecked, setIsMeatChecked] = useState(false)
+  const [isEggsChecked, setIsEggsChecked] = useState(false)
+  const [isDairyChecked, setIsDairyChecked] = useState(false)
   // const [isTampaSelected, setIsTampaSelected] = useState('tampa')
   // const [isStPeteSelected, setIsStPeteSelected] = useState('st. pete')
   // const [isRiverviewSelected, setIsRiverviewSelected] = useState('riverview')
@@ -27,9 +27,6 @@ export function ViewFarms() {
     }
     loadFarms()
   }, [filter])
-
-
-  
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -159,7 +156,7 @@ export function ViewFarms() {
       </div>
       <section className="filter-section">
         <ul className="filterbar">
-          <li>
+          {/* <li>
             <input
               type="text"
               className="search-farms"
@@ -170,8 +167,8 @@ export function ViewFarms() {
               }}
             ></input>{' '}
             OR
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <select
               name="city"
               className="city"
@@ -184,8 +181,34 @@ export function ViewFarms() {
               <option value="st. pete">St. Pete</option>
               <option value="riverview">Riverview</option>
             </select>
-          </li>
+          </li> */}
           <ul className="filter">
+            <li>
+              <input
+                type="text"
+                className="search-farms"
+                placeholder="search by farm name"
+                // value={filter}
+                onChange={function (event) {
+                  setFilter(event.target.value)
+                }}
+              ></input>{' '}
+              OR
+            </li>
+            <li>
+              <select
+                name="city"
+                className="city"
+                onChange={function (event) {
+                  setFilter(event.target.value)
+                }}
+              >
+                <option value="city">City (choose one)</option>
+                <option value="tampa">Tampa</option>
+                <option value="st. pete">St. Pete</option>
+                <option value="riverview">Riverview</option>
+              </select>
+            </li>
             <li>
               <input
                 type="checkbox"

@@ -31,7 +31,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  // padding: 20px;
 }
 .header-icon {
   width: 70px;
@@ -49,13 +49,13 @@ ul.nav_links li {
 }
 
 div.dot {
-  background-color: rgb(148, 133, 120);
+  background-color: rgb(112, 98, 85);
   padding: 10px;
-  color: rgb(148, 133, 120);
+  color: rgb(112, 98, 85);
 }
 
 div.hero {
-  background-image: url('/images/farm2.jpg');
+  background-image: url(/images/farm2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -96,7 +96,7 @@ div.body {
 
 div.filter {
   background-color: rgb(225, 236, 225);
-  background-image: url('https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url(/images/farmlist.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -110,8 +110,9 @@ ul.filterbar {
   font-family: 'Open Sans', sans-serif;
 }
 section.filter-section {
-  margin-top: 20px;
-  margin-bottom: -40px;
+  margin-top: 30px;
+  margin-bottom: -50px;
+  // border: solid;
 }
 
 h4 {
@@ -133,6 +134,8 @@ ul.filter {
 
 .city {
   margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   color: rgb(95, 81, 74);
 }
 .organic,
@@ -185,8 +188,8 @@ ul.farmlist li {
   margin-bottom: 20px;
   border: thin solid rgb(202, 194, 191);
   margin-right: 5px;
-  padding: 20px;
-  border-radius: 3rem;
+  padding: 30px;
+  margin: 5px;
 }
 
 img.farm-image {
@@ -205,7 +208,7 @@ p.farm-image {
 }
 
 button.view {
-  border-radius: 1rem;
+  // border-radius: 1rem;
   border: none;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
@@ -219,7 +222,7 @@ button.view {
 form.add-farm {
   display: flex;
   justify-content: center;
-  background-image: url('https://images.pexels.com/photos/841303/pexels-photo-841303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url(/images/formimg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -321,7 +324,7 @@ nav.farm-detail-page {
   flex-wrap: wrap;
   justify-content: center;
   // margin: 20px;
-  background-image: url('https://images.pexels.com/photos/1928491/pexels-photo-1928491.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-image: url(/images/farmdetails.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -392,21 +395,19 @@ footer {
 
 footer {
   font-size: 14px;
-  padding: 10px;
   color: white;
   text-align: center;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100;
-  background-color: rgb(148, 133, 120);
+  background-color: rgb(112, 98, 85);
 }
-
 img.icon {
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  margin-right: 20px;
 }
 
 @media all and (max-width: 500px) {
