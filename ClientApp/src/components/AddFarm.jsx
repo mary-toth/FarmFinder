@@ -160,6 +160,8 @@ export function AddFarm() {
               ></input>
             </li>
           </section>
+
+          <div className="img-upload">Drag an image here!</div>
           <li>
             <button type="submit" className="submit" onClick={handleFormSubmit}>
               Submit

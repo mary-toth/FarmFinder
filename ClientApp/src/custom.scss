@@ -312,7 +312,13 @@ input[type='checkbox']:checked:after {
   top: 2px;
   left: 6px;
 }
-
+div.img-upload {
+  border: thin solid grey;
+  color: rgb(75, 64, 59);
+  padding: 2rem;
+  margin: 1rem;
+  // margin: 10px;
+}
 // farm detail page *************************************
 
 .name-header {
