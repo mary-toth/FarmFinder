@@ -12,6 +12,7 @@ export function FarmDetails() {
     address: '',
     city: '',
     phone: '',
+    website: '',
     description: '',
     organic: '',
     meat: '',
@@ -54,7 +55,9 @@ export function FarmDetails() {
           <li className="farm-info"></li>
           <li className="farm-info">
             <button className="website">
-              Click here to visit their website!
+              <Link to={farmInfo.website}>
+                Click here to visit their website!
+              </Link>
             </button>
           </li>
         </ul>

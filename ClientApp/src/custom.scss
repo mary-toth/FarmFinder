@@ -23,7 +23,6 @@ h2.name {
 li,
 a {
   text-decoration: none;
-  color: black;
   color: rgb(80, 72, 65);
 }
 
@@ -46,6 +45,12 @@ ul.nav_links li {
   margin-right: 3px;
   font-size: 13px;
   list-style: none;
+}
+ul.nav_links li:hover {
+  transition: all 0.5s ease;
+  background-color: rgb(140, 177, 82, 0.3);
+  border-radius: 1rem;
+  padding: 5px;
 }
 
 div.dot {
@@ -208,7 +213,7 @@ p.farm-image {
 }
 
 button.view {
-  // border-radius: 1rem;
+  border-radius: 1rem;
   border: none;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
@@ -217,6 +222,14 @@ button.view {
   cursor: pointer;
 }
 
+button.view:hover {
+  transition: all 0.5s ease;
+  background-color: rgb(182, 194, 184);
+  // color: white;
+}
+.view a:hover {
+  // color: white;
+}
 //add farm page *****************************************************************************
 
 form.add-farm {
@@ -271,16 +284,26 @@ select.organic,
   padding: 10px;
   color: rgb(75, 64, 59);
 }
-button.submit {
-  border-radius: 1rem;
-  border: none;
-  padding: 10px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  color: rgb(75, 64, 59);
-  cursor: pointer;
-}
 
+button.submit {
+  transition: all 0.5s ease;
+  border: 3px solid white;
+  background-color: rgb(236, 236, 236);
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 13px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  color: white;
+  color: rgb(75, 64, 59);
+}
+button.submit:hover {
+  color: white;
+  background-color: rgb(182, 194, 184);
+}
 input[type='checkbox'] {
   position: relative;
   cursor: pointer;
@@ -317,7 +340,11 @@ div.img-upload {
   color: rgb(75, 64, 59);
   padding: 2rem;
   margin: 1rem;
-  // margin: 10px;
+}
+div.img-upload:hover {
+  transition: all 0.5s ease;
+  // color: rgb(161, 180, 162);
+  border-radius: 1.5rem;
 }
 // farm detail page *************************************
 
@@ -338,11 +365,9 @@ nav.farm-detail-page {
 }
 
 ul.farm-info {
-  padding: 20px;
   list-style: none;
   border-radius: 3rem;
-  list-style: none;
-  padding: 50px;
+  padding: 60px;
   text-align: center;
   background-color: white;
 
@@ -350,14 +375,14 @@ ul.farm-info {
 }
 li.farm-info {
   text-align: center;
-  margin-top: -5px;
-  margin-bottom: 20px;
+  // margin-top: -5px;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 li.farm-info-description {
-  border: solid;
   padding: 20px;
-  border-radius: 1rem;
   border: thin solid rgb(100, 84, 84);
+  border-radius: 1rem;
   max-width: 600px;
   line-height: 25px;
 }
@@ -368,20 +393,28 @@ img.farm-info {
 }
 
 button.website {
-  font-size: 18px;
-  padding: 25px;
-  margin: 20px;
-  margin-bottom: 0px;
-  border-radius: 3rem;
+  transition: all 0.5s ease;
   border: none;
-  background-color: rgb(179, 190, 173);
+  background-color: rgb(236, 236, 236);
+  text-align: center;
+  min-width: 200px;
+  font-size: 17px;
   font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  margin: 1rem;
+  margin-bottom: -2rem;
+  outline: none;
   cursor: pointer;
-  color: rgb(95, 81, 74);
-  background-color: rgba(150, 167, 153, 0.8);
-  color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  color: rgb(75, 64, 59);
 }
-
+button.website:hover {
+  color: white;
+  background-color: rgb(182, 194, 184);
+}
+.website a:hover {
+  // color: white;
+}
 //footer ***********************************************************************************
 footer {
   display: flex;
@@ -415,6 +448,7 @@ img.icon {
   width: 35px;
   margin: 5px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 @media all and (max-width: 500px) {

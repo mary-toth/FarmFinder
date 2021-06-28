@@ -156,32 +156,6 @@ export function ViewFarms() {
       </div>
       <section className="filter-section">
         <ul className="filterbar">
-          {/* <li>
-            <input
-              type="text"
-              className="search-farms"
-              placeholder="search by farm name"
-              // value={filter}
-              onChange={function (event) {
-                setFilter(event.target.value)
-              }}
-            ></input>{' '}
-            OR
-          </li> */}
-          {/* <li>
-            <select
-              name="city"
-              className="city"
-              onChange={function (event) {
-                setFilter(event.target.value)
-              }}
-            >
-              <option value="city">City (choose one)</option>
-              <option value="tampa">Tampa</option>
-              <option value="st. pete">St. Pete</option>
-              <option value="riverview">Riverview</option>
-            </select>
-          </li> */}
           <ul className="filter">
             <li>
               <input
@@ -286,14 +260,6 @@ export function ViewFarms() {
                 <Link to={`/farms/${farm.id}`}>View Details</Link>
               </button>
             </li>
-            // <img
-            //   className="farmlistimage"
-            //   src={
-            //     'https://images.squarespace-cdn.com/content/v1/5ac4165c9d5abb096069c163/1526611351559-0WDGD8E8QRBR9USSYSEY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/IMG_1274.JPG?format=1500w'
-            //   }
-            // ></img>
-            //   </li>
-            // </li>
           ))}
         </ul>
       </section>
