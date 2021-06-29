@@ -243,12 +243,15 @@ export function ViewFarms() {
           {farms.map((farm) => (
             <li key={farm.id}>
               <p className="farm-image">
-                <img
-                  className="farm-image"
-                  src={
-                    'https://images.squarespace-cdn.com/content/v1/5ac4165c9d5abb096069c163/1526611351559-0WDGD8E8QRBR9USSYSEY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/IMG_1274.JPG?format=1500w'
-                  }
-                ></img>
+                {farm.photoURL ? (
+                  <img
+                    className="farm-image"
+                    alt="Restaurant Photo"
+                    width={200}
+                    height={200}
+                    src={farm.photoURL}
+                  />
+                ) : null}
               </p>
               <p className="farm-name">
                 <Link to={`/farms/${farm.id}`}>{farm.name}</Link>

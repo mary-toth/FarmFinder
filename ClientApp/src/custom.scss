@@ -197,10 +197,14 @@ ul.farmlist li {
   margin: 5px;
 }
 
-img.farm-image {
+p.farm-image {
   width: 200px;
   height: 200px;
   border-radius: 2rem;
+}
+
+img.farm-image {
+  border-radius: 1rem;
 }
 p.farm-city,
 .farm-address {
@@ -376,8 +380,13 @@ ul.farm-info {
 li.farm-info {
   text-align: center;
   // margin-top: -5px;
+
   margin-bottom: 25px;
   margin-top: 20px;
+}
+
+.detail-photo {
+  border-radius: 1rem;
 }
 li.farm-info-description {
   padding: 20px;

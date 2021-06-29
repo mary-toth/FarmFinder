@@ -18,6 +18,7 @@ export function FarmDetails() {
     meat: '',
     eggs: '',
     dairy: '',
+    photoURL: '',
   })
 
   useState(() => {
@@ -42,10 +43,15 @@ export function FarmDetails() {
             <h2 className="name-header">{farmInfo.name}</h2>
           </li>
           <li className="farm-info">
-            <img
-              className="farm-info"
-              src="https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            ></img>
+            {farmInfo.photoURL ? (
+              <img
+                className="detail-photo"
+                alt="farm Photo"
+                width={250}
+                height={250}
+                src={farmInfo.photoURL}
+              />
+            ) : null}
           </li>
           <li className="farm-info">
             {farmInfo.address}, {farmInfo.city} FL
