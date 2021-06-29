@@ -141,6 +141,10 @@ export function ViewFarms() {
   }
   const handleClear = () => {
     setFilter('')
+    if (isOrganicChecked) setIsOrganicChecked(!isOrganicChecked)
+    if (isMeatChecked) setIsMeatChecked(!isMeatChecked)
+    if (isEggsChecked) setIsEggsChecked(!isEggsChecked)
+    zif (isDairyChecked) setIsDairyChecked(!isDairyChecked)
   }
 
   return (
