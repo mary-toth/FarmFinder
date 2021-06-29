@@ -1,9 +1,10 @@
-import React, { useState, useHistory } from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+
 import { useDropzone } from 'react-dropzone'
 
 export function AddFarm() {
-  // const history = useHistory()
-
+  const history = useHistory()
   const [newFarm, setNewFarm] = useState({
     name: '',
     address: '',
@@ -69,7 +70,7 @@ export function AddFarm() {
     setIsUploading(false)
   }
 
-  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+  let dropZoneMessage = 'Drag a picture of the farm here to upload!'
 
   if (isUploading) {
     dropZoneMessage = 'Uploading...'
@@ -103,9 +104,9 @@ export function AddFarm() {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newFarm),
     })
-    if (response.code === 201) {
-      // history.push('/')
-    }
+    // if (response.code === 201) {
+    history.push('/farms')
+    // }
   }
 
   return (
@@ -146,6 +147,7 @@ export function AddFarm() {
               className="city"
               onChange={handleStringFieldChange}
             >
+              <option value="choose">Choose one:</option>
               <option value="Tampa">Tampa</option>
               <option value="St. Pete">St. Pete</option>
               <option value="Riverview">Riverview</option>

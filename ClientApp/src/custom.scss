@@ -191,16 +191,9 @@ ul.farmlist {
 }
 ul.farmlist li {
   margin-bottom: 20px;
-  border: thin solid rgb(202, 194, 191);
-  margin-right: 5px;
-  padding: 30px;
+  border: thin solid rgb(195, 211, 193);
+  padding: 20px;
   margin: 5px;
-}
-
-p.farm-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 2rem;
 }
 
 img.farm-image {
@@ -209,11 +202,8 @@ img.farm-image {
 p.farm-city,
 .farm-address {
   border-radius: 1rem;
+  max-width: 200px;
   // padding: 10px;
-}
-
-p.farm-image {
-  border: none;
 }
 
 button.view {
@@ -345,11 +335,7 @@ div.img-upload {
   padding: 2rem;
   margin: 1rem;
 }
-div.img-upload:hover {
-  transition: all 0.5s ease;
-  // color: rgb(161, 180, 162);
-  border-radius: 1.5rem;
-}
+
 // farm detail page *************************************
 
 .name-header {
@@ -395,6 +381,7 @@ li.farm-info-description {
   max-width: 600px;
   line-height: 25px;
 }
+
 img.farm-info {
   width: 250px;
   height: 200px;
