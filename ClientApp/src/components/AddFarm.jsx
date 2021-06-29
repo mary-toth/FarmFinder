@@ -1,4 +1,5 @@
 import React, { useState, useHistory } from 'react'
+import { useDropzone } from 'react-dropzone'
 
 export function AddFarm() {
   // const history = useHistory()
@@ -14,7 +15,69 @@ export function AddFarm() {
     meat: false,
     eggs: false,
     dairy: false,
+    photoURL: '',
   })
+  const [isUploading, setIsUploading] = useState(false)
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: onDropFile,
+  })
+  const [errorMessage, setErrorMessage] = useState('')
+
+  async function onDropFile(acceptedFiles) {
+    // Do something with the files
+    const fileToUpload = acceptedFiles[0]
+    console.log(fileToUpload)
+
+    setIsUploading(true)
+
+    // Create a formData object so we can send this
+    // to the API that is expecting som form data.
+    const formData = new FormData()
+
+    // Append a field that is the form upload itself
+    formData.append('file', fileToUpload)
+
+    try {
+      // Use fetch to send an authorization header and
+      // a body containing the form data with the file
+      const response = await fetch('/api/Uploads', {
+        method: 'POST',
+        headers: {},
+        body: formData,
+      })
+
+      // If we receive a 200 OK response, set the
+      // URL of the photo in our state so that it is
+      // sent along when creating the restaurant,
+      // otherwise show an error
+      if (response.status === 200) {
+        const apiResponse = await response.json()
+
+        const url = apiResponse.url
+
+        setNewFarm({ ...newFarm, photoURL: url })
+      } else {
+        setErrorMessage('Unable to upload image')
+      }
+    } catch {
+      // Catch any network errors and show the user we could not process their upload
+      // console.debug(error)
+      setErrorMessage('Unable to upload image')
+    }
+
+    setIsUploading(false)
+  }
+
+  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+
+  if (isUploading) {
+    dropZoneMessage = 'Uploading...'
+  }
+
+  if (isDragActive) {
+    dropZoneMessage = 'Drop the files here ...'
+  }
 
   function handleStringFieldChange(event) {
     const value = event.target.value
@@ -161,7 +224,25 @@ export function AddFarm() {
             </li>
           </section>
 
-          <div className="img-upload">Drag an image here!</div>
+          {newFarm.photoURL ? (
+            <p>
+              <img
+                alt="Farm Photo"
+                width={200}
+                height={200}
+                src={newFarm.photoURL}
+              />
+            </p>
+          ) : null}
+          <div className="img-upload">
+            <div className="file-drop-zone">
+              <div {...getRootProps()}>
+                <input {...getInputProps()} />
+                {dropZoneMessage}
+              </div>
+            </div>
+          </div>
+
           <li>
             <button type="submit" className="submit" onClick={handleFormSubmit}>
               Add Farm

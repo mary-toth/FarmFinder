@@ -16,7 +16,7 @@ namespace FarmFinder.Models
         public bool Meat { get; set; }
         public bool Eggs { get; set; }
         public bool Dairy { get; set; }
-        // public string PhotoURL {get ; set; }
+        public string PhotoURL {get ; set; }
     }
 }
 

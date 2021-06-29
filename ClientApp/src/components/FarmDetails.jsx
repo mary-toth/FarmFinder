@@ -55,9 +55,7 @@ export function FarmDetails() {
           <li className="farm-info"></li>
           <li className="farm-info">
             <button className="website">
-              <Link to={farmInfo.website}>
-                Click here to visit their website!
-              </Link>
+              <a href={farmInfo.website}>Click here to visit their website!</a>
             </button>
           </li>
         </ul>
