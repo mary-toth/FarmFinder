@@ -47,8 +47,8 @@ export function FarmDetails() {
               <img
                 className="detail-photo"
                 alt="farm Photo"
-                width={250}
-                height={250}
+                width={280}
+                height={280}
                 src={farmInfo.photoURL}
               />
             ) : null}

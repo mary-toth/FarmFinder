@@ -139,16 +139,10 @@ export function ViewFarms() {
   const handleDairyChange = () => {
     setIsDairyChecked(!isDairyChecked)
   }
+  const handleClear = () => {
+    setFilter('')
+  }
 
-  // const handleTampa = () => {
-  //   setIsTampaSelected(isTampaSelected)
-  // }
-  // const handleStPete = () => {
-  //   setIsStPeteSelected(isStPeteSelected)
-  // }
-  // const handleRiverview = () => {
-  //   setIsRiverviewSelected(isRiverviewSelected)
-  // }
   return (
     <>
       <div className="filter">
@@ -232,6 +226,15 @@ export function ViewFarms() {
                 onClick={handleSubmit}
               >
                 Search
+              </button>
+            </li>
+            <li>
+              <button
+                name="clear-button"
+                className="clear-button"
+                onClick={handleClear}
+              >
+                Clear Filters
               </button>
             </li>
           </ul>

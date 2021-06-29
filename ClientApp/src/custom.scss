@@ -48,7 +48,7 @@ ul.nav_links li {
 }
 ul.nav_links li:hover {
   transition: all 0.5s ease;
-  background-color: rgb(140, 177, 82, 0.3);
+  background-color: rgb(209, 216, 210);
   border-radius: 1rem;
   padding: 5px;
 }
@@ -97,7 +97,7 @@ div.body {
   padding: 30px;
 }
 
-//view farm page ******************************************************************
+//view farms page ******************************************************************
 
 div.filter {
   background-color: rgb(225, 236, 225);
@@ -162,6 +162,28 @@ ul.filter {
   margin-top: 5px;
   cursor: pointer;
 }
+.list-button:hover {
+  // transition: all 0.2s ease;
+
+  background-color: rgb(224, 235, 220);
+}
+.clear-button {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  // border-radius: 3rem;
+  padding: 5px;
+  background-color: rgb(195, 197, 196);
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.clear-button:hover {
+  transition: all 0.3s ease;
+
+  background-color: rgb(212, 223, 207);
+}
 
 label,
 .city {
@@ -198,12 +220,14 @@ ul.farmlist li {
 
 img.farm-image {
   border-radius: 1rem;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 p.farm-city,
 .farm-address {
   border-radius: 1rem;
   max-width: 200px;
-  // padding: 10px;
 }
 
 button.view {
@@ -212,16 +236,15 @@ button.view {
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: rgb(75, 64, 59);
   cursor: pointer;
 }
 
 button.view:hover {
   transition: all 0.5s ease;
-  background-color: rgb(182, 194, 184);
-  // color: white;
+  background-color: rgb(209, 216, 210);
 }
 .view a:hover {
+  transition: all 0.5s ease;
   // color: white;
 }
 //add farm page *****************************************************************************
@@ -296,7 +319,7 @@ button.submit {
 }
 button.submit:hover {
   color: white;
-  background-color: rgb(182, 194, 184);
+  background-color: rgb(209, 216, 210);
 }
 input[type='checkbox'] {
   position: relative;
@@ -358,7 +381,7 @@ ul.farm-info {
   list-style: none;
   border-radius: 3rem;
   padding: 60px;
-  text-align: center;
+  text-align: justify;
   background-color: white;
 
   // border: solid;
@@ -373,6 +396,7 @@ li.farm-info {
 
 .detail-photo {
   border-radius: 1rem;
+  object-fit: cover;
 }
 li.farm-info-description {
   padding: 20px;
@@ -380,12 +404,6 @@ li.farm-info-description {
   border-radius: 1rem;
   max-width: 600px;
   line-height: 25px;
-}
-
-img.farm-info {
-  width: 250px;
-  height: 200px;
-  border-radius: 2rem;
 }
 
 button.website {
@@ -405,12 +423,13 @@ button.website {
   color: rgb(75, 64, 59);
 }
 button.website:hover {
-  color: white;
-  background-color: rgb(182, 194, 184);
+  background-color: rgb(209, 216, 210);
 }
 .website a:hover {
+  transition: all 0.5s ease;
   // color: white;
 }
+
 //footer ***********************************************************************************
 footer {
   display: flex;
