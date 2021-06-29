@@ -144,7 +144,7 @@ export function ViewFarms() {
     if (isOrganicChecked) setIsOrganicChecked(!isOrganicChecked)
     if (isMeatChecked) setIsMeatChecked(!isMeatChecked)
     if (isEggsChecked) setIsEggsChecked(!isEggsChecked)
-    zif (isDairyChecked) setIsDairyChecked(!isDairyChecked)
+    if (isDairyChecked) setIsDairyChecked(!isDairyChecked)
   }
 
   return (
