@@ -277,6 +277,11 @@ li.add-farm-txt {
   font-size: 23px;
 }
 
+li.error-msg {
+  max-width: 400px;
+  color: rgba(255, 56, 56, 0.904);
+}
+
 section.boolean-form {
   display: flex;
 }

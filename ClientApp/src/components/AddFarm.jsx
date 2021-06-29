@@ -19,11 +19,11 @@ export function AddFarm() {
     photoURL: '',
   })
   const [isUploading, setIsUploading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: onDropFile,
   })
-  const [errorMessage, setErrorMessage] = useState('')
 
   async function onDropFile(acceptedFiles) {
     // Do something with the files
@@ -104,9 +104,13 @@ export function AddFarm() {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newFarm),
     })
-    // if (response.code === 201) {
-    history.push('/farms')
-    // }
+    const json = await response.json()
+
+    if (response.status === 400) {
+      setErrorMessage(Object.values(json.errors).join(' '))
+    } else {
+      history.push('/')
+    }
   }
 
   return (
@@ -118,6 +122,14 @@ export function AddFarm() {
           <li className="add-farm-txt">Add a Farm</li>
           <li> Fill out the form below to add a farm to the database.</li>
 
+          <li className="error-msg">
+            {errorMessage ? (
+              <p>
+                Missing:<p></p>
+                {errorMessage}
+              </p>
+            ) : null}
+          </li>
           <li>
             <label htmlFor="name">Name</label>
             <input
