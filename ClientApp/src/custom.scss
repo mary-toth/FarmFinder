@@ -30,7 +30,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 20px;
 }
 .header-icon {
   width: 70px;
@@ -78,23 +77,35 @@ h1 {
 }
 button.home {
   font-family: 'Open Sans', sans-serif;
-  // margin-bottom: 90px;
   padding: 15px;
   border-radius: 1rem;
   border: none;
   cursor: pointer;
 }
-
+.who-are-we {
+  text-align: center;
+}
+.all {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
 div.body {
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  text-align: justify;
+
   line-height: 2rem;
-  margin: 20px;
-  border: thin solid rgb(161, 147, 134);
   border-radius: 1rem;
   color: rgb(80, 72, 65);
   padding: 30px;
+}
+section.body {
+  max-width: 1000px;
+  border: thin solid rgb(161, 147, 134);
+  padding: 20px;
+  border-radius: 1rem;
 }
 
 //view farms page ******************************************************************

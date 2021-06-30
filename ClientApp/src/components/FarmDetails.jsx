@@ -34,7 +34,6 @@ export function FarmDetails() {
 
   return (
     <>
-      {/* <div className="head"></div> */}
 
       <nav className="farm-detail-page">
         <ul className="farm-info">

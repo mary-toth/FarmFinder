@@ -123,12 +123,7 @@ export function AddFarm() {
           <li> Fill out the form below to add a farm to the database.</li>
 
           <li className="error-msg">
-            {errorMessage ? (
-              <p>
-                Missing:<p></p>
-                {errorMessage}
-              </p>
-            ) : null}
+            {errorMessage ? <p>{errorMessage}</p> : null}
           </li>
           <li>
             <label htmlFor="name">Name</label>
