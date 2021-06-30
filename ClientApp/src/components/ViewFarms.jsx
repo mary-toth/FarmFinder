@@ -32,6 +32,14 @@ export function ViewFarms() {
       setFilter('o')
     if (
       isTampaSelected &&
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('tampa')
+    if (
+      isTampaSelected &&
       isOrganicChecked &&
       !isMeatChecked &&
       !isEggsChecked &&

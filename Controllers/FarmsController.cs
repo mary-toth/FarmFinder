@@ -55,6 +55,7 @@ namespace FarmFinder.Controllers
                     case "st. pete":
                         return await _context.Farms.Where(farm => farm.City == "St. Pete").ToListAsync();
 
+                    
 
                     case "to":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.City == "Tampa").ToListAsync();

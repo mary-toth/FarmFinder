@@ -19,7 +19,7 @@ namespace FarmFinder.Models
         [Required(ErrorMessage = "Enter a description.")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "Enter a phone.")]
+
         public string Phone { get; set; }
 
         [Required(ErrorMessage = "Enter a website URL.")]
