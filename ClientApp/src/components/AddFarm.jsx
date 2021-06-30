@@ -109,7 +109,7 @@ export function AddFarm() {
     if (response.status === 400) {
       setErrorMessage(Object.values(json.errors).join(' '))
     } else {
-      history.push('/')
+      history.push('/farms')
     }
   }
 

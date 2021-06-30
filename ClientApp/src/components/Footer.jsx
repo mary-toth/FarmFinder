@@ -9,10 +9,14 @@ export function Footer() {
         <h2 className="footer-left">made by mary toth 2021</h2>
         <ul className="footer-list">
           <li>
-            <img className="icon" src={github}></img>
+            <a href="https://github.com/mary-toth">
+              <img className="icon" src={github}></img>
+            </a>
           </li>
           <li>
-            <img className="icon" src={linkedin}></img>
+            <a href="https://www.linkedin.com/in/mary-toth-a2004812b/">
+              <img className="icon" src={linkedin}></img>
+            </a>
           </li>
         </ul>
       </footer>
