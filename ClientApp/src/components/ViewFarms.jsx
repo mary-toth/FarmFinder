@@ -30,7 +30,7 @@ export function ViewFarms() {
 
     if (isOrganicChecked && !isMeatChecked && !isEggsChecked && !isDairyChecked)
       setFilter('o')
-    else if (
+    if (
       isTampaSelected &&
       isOrganicChecked &&
       !isMeatChecked &&
@@ -38,96 +38,31 @@ export function ViewFarms() {
       !isDairyChecked
     )
       setFilter('to')
-    else if (
-      isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      !isDairyChecked
-    )
+    if (isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
       setFilter('om')
-    else if (
-      isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
+    if (isOrganicChecked && !isMeatChecked && isEggsChecked && !isDairyChecked)
       setFilter('oe')
-    else if (
-      isOrganicChecked &&
-      !isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
+    if (isOrganicChecked && !isMeatChecked && !isEggsChecked && isDairyChecked)
       setFilter('od')
-    else if (
-      isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
+    if (isOrganicChecked && isMeatChecked && isEggsChecked && !isDairyChecked)
       setFilter('ome')
-    else if (
-      isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      !isDairyChecked
-    )
+    if (isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
       setFilter('omd')
-    else if (
-      isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
+    if (isOrganicChecked && isMeatChecked && isEggsChecked && isDairyChecked)
       setFilter('omed')
-    else if (
-      !isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      !isDairyChecked
-    )
+    if (!isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
       setFilter('m')
-    else if (
-      !isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
+    if (!isOrganicChecked && isMeatChecked && isEggsChecked && !isDairyChecked)
       setFilter('me')
-    else if (
-      !isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
+    if (!isOrganicChecked && isMeatChecked && !isEggsChecked && isDairyChecked)
       setFilter('md')
-    else if (
-      !isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
+    if (!isOrganicChecked && isMeatChecked && isEggsChecked && isDairyChecked)
       setFilter('mde')
-    else if (
-      !isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
+    if (!isOrganicChecked && !isMeatChecked && isEggsChecked && !isDairyChecked)
       setFilter('e')
-    else if (
-      !isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
+    if (!isOrganicChecked && !isMeatChecked && isEggsChecked && isDairyChecked)
       setFilter('ed')
-    else if (
-      !isOrganicChecked &&
-      !isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
+    if (!isOrganicChecked && !isMeatChecked && !isEggsChecked && isDairyChecked)
       setFilter('d')
   }
 
@@ -153,10 +88,12 @@ export function ViewFarms() {
 
   const handleClear = () => {
     setFilter('')
-    if (isOrganicChecked) setIsOrganicChecked(!isOrganicChecked)
-    if (isMeatChecked) setIsMeatChecked(!isMeatChecked)
-    if (isEggsChecked) setIsEggsChecked(!isEggsChecked)
-    if (isDairyChecked) setIsDairyChecked(!isDairyChecked)
+    setIsOrganicChecked(false)
+    setIsMeatChecked(false)
+    setIsEggsChecked(false)
+    setIsDairyChecked(false)
+    setIsTampaSelected(false)
+    setIsStPeteSelected(false)
   }
 
   return (
@@ -182,21 +119,31 @@ export function ViewFarms() {
               <select
                 name="city"
                 className="city"
+                value={
+                  isTampaSelected
+                    ? 'tampa'
+                    : isStPeteSelected
+                    ? 'st. pete'
+                    : 'city'
+                }
                 onChange={function (event) {
-                  setFilter(event.target.value)
+                  if (event.target.value === 'tampa') {
+                    setIsTampaSelected(true)
+                    setIsStPeteSelected(false)
+                  }
+                  if (event.target.value === 'st. pete') {
+                    setIsTampaSelected(false)
+                    setIsStPeteSelected(true)
+                  }
+                  if (event.target.value === 'city') {
+                    setIsStPeteSelected(false)
+                    setIsTampaSelected(false)
+                  }
                 }}
               >
                 <option value="city">City (choose one)</option>
-                <option
-                  value="tampa"
-                  selected={isTampaSelected}
-                  onChange={handleTampaSelect}
-                >
-                  Tampa
-                </option>
-                <option value="st. pete" selected={isStPeteSelected}>
-                  St. Pete
-                </option>
+                <option value="tampa">Tampa</option>
+                <option value="st. pete">St. Pete</option>
               </select>
             </li>
             <li>
