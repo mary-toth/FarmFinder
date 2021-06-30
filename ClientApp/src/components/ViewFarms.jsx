@@ -414,7 +414,9 @@ export function ViewFarms() {
                   }
                 }}
               >
-                <option value="city">City (choose one)</option>
+                <option className="city-dropdown" value="city">
+                  City (choose one)
+                </option>
                 <option value="tampa">Tampa</option>
                 <option value="st. pete">St. Pete</option>
               </select>

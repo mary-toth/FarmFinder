@@ -151,7 +151,7 @@ export function AddFarm() {
             <label htmlFor="city">City</label>
             <select
               name="city"
-              className="city"
+              className="add-city"
               onChange={handleStringFieldChange}
             >
               <option value="choose">Choose one:</option>
