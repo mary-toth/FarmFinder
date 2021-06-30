@@ -204,7 +204,7 @@ export function ViewFarms() {
       !isDairyChecked
     )
       setFilter('tm')
-      
+
     if (
       !isTampaSelected &&
       isStPeteSelected &&
