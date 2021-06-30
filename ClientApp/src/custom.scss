@@ -105,7 +105,7 @@ div.body {
   padding: 30px;
 }
 section.body {
-  max-width: 1000px;
+  max-width: 800px;
   border: thin solid rgb(161, 147, 134);
   padding: 20px;
   border-radius: 1rem;
@@ -321,6 +321,12 @@ select.organic,
   color: rgb(75, 64, 59);
 }
 
+img.farm-photo {
+  border-radius: 1rem;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
 button.submit {
   transition: all 0.5s ease;
   border: 3px solid white;

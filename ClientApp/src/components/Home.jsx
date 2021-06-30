@@ -17,24 +17,12 @@ export function Home() {
           <section className="body">
             <h2 className="who-are-we">Who are we?</h2>
             Farm Finder was inspired by a desire to make finding fresh, local
-            produce an easier process. By supporting local farms, you are:
-            <section className="list-of-things">
-              <p>
-                -Protecting the environment. Food in the U.S. travels an average
-                of 1,500 miles to get to your plate- that’s a lot, and this
-                shipping contributes significantly to fossil fuel usage and
-                pollution. Local farm food is transported shorter distances and
-                has a far better impact on the earth.{' '}
-              </p>
-              <p>-Supporting local families</p>
-              <p>
-                -Eating healthier food! So much of the food found in grocery
-                stores is highly processed and grown using harsh pesticides, and
-                the meat is often full of hormones and antibiotics.{' '}
-              </p>
-            </section>
+            produce an easier process. By supporting local farms, you’re
+            supporting families, healthier food, and farming practices that
+            benefit the environment. Thanks to Farm Finder, you can find exactly
+            what you're looking for in just a few clicks.
             <h3 className="who-are-we">
-              Farm Finder connects you to 42 farms in the Tampa/St. Pete area.
+              Start searching for farms in your area today!{' '}
             </h3>
           </section>
         </div>

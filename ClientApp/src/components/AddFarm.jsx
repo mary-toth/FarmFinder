@@ -236,6 +236,7 @@ export function AddFarm() {
           {newFarm.photoURL ? (
             <p>
               <img
+                className="farm-photo"
                 alt="Farm Photo"
                 width={200}
                 height={200}
