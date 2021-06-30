@@ -173,16 +173,15 @@ ul.filter {
   border: none;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
-  // color: rgb(75, 64, 59);
   margin: 10px;
   margin-top: 5px;
   cursor: pointer;
+  background-color: rgb(195, 197, 196);
 }
-.list-button:hover {
-  transition: all 0.6s ease;
-
-  background-color: rgb(224, 235, 220);
-}
+// .list-button:hover {
+//   transition: all 0.6s ease;
+//   background-color: rgb(149, 163, 144);
+// }
 
 .clear-button {
   font-family: 'Open Sans', sans-serif;
@@ -341,7 +340,7 @@ img.farm-photo {
   object-fit: cover;
 }
 button.submit {
-  transition: all 0.5s ease;
+  // transition: all 0.5s ease;
   border: 3px solid white;
   background-color: rgb(236, 236, 236);
   text-align: center;
@@ -352,13 +351,9 @@ button.submit {
   outline: none;
   cursor: pointer;
   border-radius: 2rem;
-  color: white;
   color: rgb(75, 64, 59);
 }
-button.submit:hover {
-  color: white;
-  background-color: rgb(209, 216, 210);
-}
+
 input[type='checkbox'] {
   position: relative;
   cursor: pointer;
