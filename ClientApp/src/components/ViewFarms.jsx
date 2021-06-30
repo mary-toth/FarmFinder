@@ -49,6 +49,13 @@ export function ViewFarms() {
 
     if (isOrganicChecked && !isMeatChecked && !isEggsChecked && !isDairyChecked)
       setFilter('o')
+
+    if (!isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
+      setFilter('m')
+    if (!isOrganicChecked && !isMeatChecked && isEggsChecked && !isDairyChecked)
+      setFilter('e')
+    if (!isOrganicChecked && !isMeatChecked && !isEggsChecked && isDairyChecked)
+      setFilter('d')
     if (
       isTampaSelected &&
       !isStPeteSelected &&
@@ -59,6 +66,25 @@ export function ViewFarms() {
     )
       setFilter('to')
     if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      !isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('tm')
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('td')
+
+    if (
       !isTampaSelected &&
       isStPeteSelected &&
       isOrganicChecked &&
@@ -67,7 +93,55 @@ export function ViewFarms() {
       !isDairyChecked
     )
       setFilter('so')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('se')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('sd')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      !isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('sm')
+    if (isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
+      setFilter('om')
+    if (isOrganicChecked && !isMeatChecked && isEggsChecked && !isDairyChecked)
+      setFilter('oe')
+    if (isOrganicChecked && !isMeatChecked && !isEggsChecked && isDairyChecked)
+      setFilter('od')
 
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      !isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('te')
+    if (!isOrganicChecked && isMeatChecked && isEggsChecked && !isDairyChecked)
+      setFilter('me')
+    if (!isOrganicChecked && isMeatChecked && !isEggsChecked && isDairyChecked)
+      setFilter('md')
+    if (!isOrganicChecked && !isMeatChecked && isEggsChecked && isDairyChecked)
+      setFilter('ed')
     if (
       isTampaSelected &&
       !isStPeteSelected &&
@@ -86,222 +160,8 @@ export function ViewFarms() {
       !isDairyChecked
     )
       setFilter('som')
-
-    if (isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
-      setFilter('om')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('toe')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('soe')
-    if (isOrganicChecked && !isMeatChecked && isEggsChecked && !isDairyChecked)
-      setFilter('oe')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      isOrganicChecked &&
-      !isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('tod')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      isOrganicChecked &&
-      !isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('sod')
-    if (isOrganicChecked && !isMeatChecked && !isEggsChecked && isDairyChecked)
-      setFilter('od')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('tome')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('some')
-    if (isOrganicChecked && isMeatChecked && isEggsChecked && !isDairyChecked)
-      setFilter('ome')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('tomd')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('somd')
-    if (isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
-      setFilter('omd')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('tomed')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('somed')
-    if (isOrganicChecked && isMeatChecked && isEggsChecked && isDairyChecked)
-      setFilter('omed')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('tm')
-
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('sm')
-
-    if (!isOrganicChecked && isMeatChecked && !isEggsChecked && !isDairyChecked)
-      setFilter('m')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('tme')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('sme')
-    if (!isOrganicChecked && isMeatChecked && isEggsChecked && !isDairyChecked)
-      setFilter('me')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('tmd')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      !isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('smd')
-    if (!isOrganicChecked && isMeatChecked && !isEggsChecked && isDairyChecked)
-      setFilter('md')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('tmde')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      !isOrganicChecked &&
-      isMeatChecked &&
-      isEggsChecked &&
-      isDairyChecked
-    )
-      setFilter('smde')
     if (!isOrganicChecked && isMeatChecked && isEggsChecked && isDairyChecked)
       setFilter('mde')
-
-    if (
-      isTampaSelected &&
-      !isStPeteSelected &&
-      !isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('te')
-    if (
-      !isTampaSelected &&
-      isStPeteSelected &&
-      !isOrganicChecked &&
-      !isMeatChecked &&
-      isEggsChecked &&
-      !isDairyChecked
-    )
-      setFilter('se')
-
-    if (!isOrganicChecked && !isMeatChecked && isEggsChecked && !isDairyChecked)
-      setFilter('e')
 
     if (
       isTampaSelected &&
@@ -321,28 +181,162 @@ export function ViewFarms() {
       isDairyChecked
     )
       setFilter('sed')
-    if (!isOrganicChecked && !isMeatChecked && isEggsChecked && isDairyChecked)
-      setFilter('ed')
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('toe')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      isOrganicChecked &&
+      !isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('soe')
+
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('tod')
+    if (isOrganicChecked && isMeatChecked && isEggsChecked && !isDairyChecked)
+      setFilter('ome')
     if (
       isTampaSelected &&
       !isStPeteSelected &&
       !isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('tme')
+    if (isOrganicChecked && isMeatChecked && !isEggsChecked && isDairyChecked)
+      setFilter('omd')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      isOrganicChecked &&
       !isMeatChecked &&
       !isEggsChecked &&
       isDairyChecked
     )
-      setFilter('td')
+      setFilter('sod')
+
     if (
       !isTampaSelected &&
       isStPeteSelected &&
       !isOrganicChecked &&
-      !isMeatChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('sme')
+
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      !isOrganicChecked &&
+      isMeatChecked &&
       !isEggsChecked &&
       isDairyChecked
     )
-      setFilter('sd')
-    if (!isOrganicChecked && !isMeatChecked && !isEggsChecked && isDairyChecked)
-      setFilter('d')
+      setFilter('tmd')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      !isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('smd')
+
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      !isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('tmde')
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('tome')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('some')
+
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('tomd')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      isOrganicChecked &&
+      isMeatChecked &&
+      !isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('somd')
+
+    if (isOrganicChecked && isMeatChecked && isEggsChecked && isDairyChecked)
+      setFilter('omed')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      !isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('smde')
+    if (
+      isTampaSelected &&
+      !isStPeteSelected &&
+      isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('tomed')
+    if (
+      !isTampaSelected &&
+      isStPeteSelected &&
+      isOrganicChecked &&
+      isMeatChecked &&
+      isEggsChecked &&
+      isDairyChecked
+    )
+      setFilter('somed')
   }
 
   const handleOrganicChange = () => {

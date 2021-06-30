@@ -16,13 +16,23 @@ export function Home() {
         <div className="body">
           <section className="body">
             <h2 className="who-are-we">Who are we?</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            Farm Finder was inspired by a desire to make finding fresh, local
+            produce an easier process. By supporting local farms, you are:
+            <section className="list-of-things">
+              <p>
+                -Protecting the environment. Food in the U.S. travels an average
+                of 1,500 miles to get to your plate- that’s a lot, and this
+                shipping contributes significantly to fossil fuel usage and
+                pollution. Local farm food is transported shorter distances and
+                has a far better impact on the earth.{' '}
+              </p>
+              <p>-Supporting local families</p>
+              <p>
+                -Eating healthier food! So much of the food found in grocery
+                stores is highly processed and grown using harsh pesticides, and
+                the meat is often full of hormones and antibiotics.{' '}
+              </p>
+            </section>
             <h3 className="who-are-we">
               Farm Finder connects you to 42 farms in the Tampa/St. Pete area.
             </h3>
