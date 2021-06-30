@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=RocknRoll+One&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
   font-family: 'Open Sans', sans-serif;
@@ -17,10 +20,9 @@ header {
   padding: 10px;
 }
 h2.name {
-  color: rgb(80, 72, 65);
+  font-weight: lighter;
+  font-family: 'RocknRoll One', sans-serif;
 }
-
-li,
 a {
   text-decoration: none;
   color: rgb(80, 72, 65);
@@ -46,9 +48,9 @@ ul.nav_links li {
   list-style: none;
 }
 ul.nav_links li:hover {
-  transition: all 0.5s ease;
-  background-color: rgb(209, 216, 210);
-  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+  background-color: rgb(184, 201, 184);
+  border-radius: 0.5rem;
   padding: 5px;
 }
 
@@ -140,7 +142,7 @@ h4 {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 30px;
   padding: 15px;
-  width: 170px;
+  width: 200px;
   text-align: center;
 }
 ul.filter {
@@ -199,7 +201,7 @@ ul.farmlist {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border-radius: 3rem;
+  border-radius: 1rem;
   list-style: none;
   padding: 30px;
   margin: 40px;
@@ -207,10 +209,12 @@ ul.farmlist {
   background-color: white;
   text-align: center;
   color: rgb(80, 72, 65);
+  background-color: rgb(233, 238, 231);
 }
 ul.farmlist li {
   margin-bottom: 20px;
-  border: thin solid rgb(195, 211, 193);
+  background-color: white;
+  // border: thin solid rgb(199, 207, 197);
   padding: 25px;
   margin: 10px;
 }
@@ -220,6 +224,7 @@ img.farm-image {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  margin-top: -20px;
 }
 p.farm-city,
 .farm-address {
@@ -234,15 +239,7 @@ button.view {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   cursor: pointer;
-}
-
-button.view:hover {
-  transition: all 0.5s ease;
-  background-color: rgb(209, 216, 210);
-}
-.view a:hover {
-  transition: all 0.5s ease;
-  color: white;
+  margin-bottom: -10px;
 }
 
 //add farm page *****************************************************************************
@@ -322,7 +319,6 @@ img.farm-photo {
   object-fit: cover;
 }
 button.submit {
-  // transition: all 0.5s ease;
   border: 3px solid white;
   background-color: rgb(236, 236, 236);
   text-align: center;
@@ -335,7 +331,12 @@ button.submit {
   border-radius: 2rem;
   color: rgb(75, 64, 59);
 }
+button.submit:hover {
+  color: white;
+  transition: all 0.5s ease;
 
+  background-color: rgb(184, 201, 184);
+}
 input[type='checkbox'] {
   cursor: pointer;
 }
@@ -411,11 +412,8 @@ button.website {
   color: rgb(75, 64, 59);
 }
 button.website:hover {
-  background-color: rgb(209, 216, 210);
-}
-.website a:hover {
+  background-color: rgb(184, 201, 184);
   transition: all 0.5s ease;
-  // color: white;
 }
 
 //footer ***********************************************************************************
@@ -437,9 +435,8 @@ footer {
 }
 
 footer {
-  font-size: 14px;
-  color: white;
-  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
   bottom: 0;
   left: 0;
   right: 0;
