@@ -133,7 +133,6 @@ ul.filterbar {
 section.filter-section {
   margin-top: 30px;
   margin-bottom: -50px;
-  // border: solid;
 }
 
 h4 {
@@ -148,6 +147,8 @@ ul.filter {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-bottom: 70px;
+
   color: rgb(95, 81, 74);
   padding: 4px;
 
@@ -159,6 +160,7 @@ ul.filter {
   margin-left: 5px;
   margin-right: 5px;
   color: rgb(95, 81, 74);
+
   -webkit-appearance: none;
 }
 .organic,
@@ -168,37 +170,16 @@ ul.filter {
   margin-top: 15px;
 }
 
-.list-button {
-  font-family: 'Open Sans', sans-serif;
-  border: none;
-  padding: 10px;
-  font-family: 'Open Sans', sans-serif;
-  margin: 10px;
-  margin-top: 5px;
-  cursor: pointer;
-  background-color: rgb(195, 197, 196);
-}
-// .list-button:hover {
-//   transition: all 0.6s ease;
-//   background-color: rgb(149, 163, 144);
-// }
-
+.list-button,
 .clear-button {
-  font-family: 'Open Sans', sans-serif;
-  border: none;
-  // border-radius: 3rem;
-  padding: 5px;
-  background-color: rgb(195, 197, 196);
-  font-family: 'Open Sans', sans-serif;
   color: white;
+  background-color: rgb(185, 185, 185);
+  border: none;
   margin: 5px;
-  margin-top: 10px;
+  margin-top: 9px;
   cursor: pointer;
-}
-.clear-button:hover {
-  transition: all 0.3s ease;
-
-  background-color: rgb(212, 223, 207);
+  padding: 4px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 label,
@@ -261,8 +242,9 @@ button.view:hover {
 }
 .view a:hover {
   transition: all 0.5s ease;
-  // color: white;
+  color: white;
 }
+
 //add farm page *****************************************************************************
 
 form.add-farm {
@@ -355,36 +337,9 @@ button.submit {
 }
 
 input[type='checkbox'] {
-  position: relative;
   cursor: pointer;
 }
-// input[type='checkbox']:before {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   width: 12px;
-//   height: 12px;
-//   top: -1px;
-//   left: -1px;
-//   border: 1px solid rgb(75, 64, 59);
-//   border-radius: 3px;
-//   background-color: white;
-// }
 
-// input[type='checkbox']:checked:after {
-//   content: '';
-//   display: block;
-//   width: 3px;
-//   height: 8px;
-//   border: solid rgb(75, 64, 59);
-//   border-width: 0 2px 2px 0;
-//   -webkit-transform: rotate(45deg);
-//   -ms-transform: rotate(45deg);
-//   transform: rotate(45deg);
-//   position: absolute;
-//   top: 1px;
-//   left: 4px;
-// }
 div.img-upload {
   border: thin solid grey;
   color: rgb(75, 64, 59);
