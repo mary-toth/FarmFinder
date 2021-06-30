@@ -93,24 +93,24 @@ button.home {
   flex-direction: column;
   justify-content: center;
 }
-section.list-of-things {
-  // text-align: center;
-}
+
 div.body {
   display: flex;
   justify-content: center;
   text-align: justify;
-
+  margin: 30px;
+  background-color: rgb(233, 238, 231);
   line-height: 2rem;
   border-radius: 1rem;
   color: rgb(80, 72, 65);
   padding: 30px;
 }
 section.body {
-  max-width: 800px;
-  border: thin solid rgb(161, 147, 134);
-  padding: 20px;
+  max-width: 900px;
+  // border: thin solid rgb(161, 147, 134);
+  padding: 40px;
   border-radius: 1rem;
+  background-color: white;
 }
 
 //view farms page ******************************************************************
@@ -240,6 +240,7 @@ button.view {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: -10px;
+  background-color: rgb(221, 221, 221);
 }
 
 //add farm page *****************************************************************************
