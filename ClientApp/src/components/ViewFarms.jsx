@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export function ViewFarms() {
   const [farms, setFarms] = useState([])
@@ -8,11 +8,8 @@ export function ViewFarms() {
   const [isMeatChecked, setIsMeatChecked] = useState(false)
   const [isEggsChecked, setIsEggsChecked] = useState(false)
   const [isDairyChecked, setIsDairyChecked] = useState(false)
-  // const [isTampaSelected, setIsTampaSelected] = useState('tampa')
-  // const [isStPeteSelected, setIsStPeteSelected] = useState('st. pete')
-  // const [isRiverviewSelected, setIsRiverviewSelected] = useState('riverview')
-
-  const history = useHistory()
+  const [isTampaSelected, setIsTampaSelected] = useState(false)
+  const [isStPeteSelected, setIsStPeteSelected] = useState(false)
 
   useEffect(() => {
     async function loadFarms() {
@@ -33,6 +30,14 @@ export function ViewFarms() {
 
     if (isOrganicChecked && !isMeatChecked && !isEggsChecked && !isDairyChecked)
       setFilter('o')
+    else if (
+      isTampaSelected &&
+      isOrganicChecked &&
+      !isMeatChecked &&
+      !isEggsChecked &&
+      !isDairyChecked
+    )
+      setFilter('to')
     else if (
       isOrganicChecked &&
       isMeatChecked &&
@@ -139,6 +144,13 @@ export function ViewFarms() {
   const handleDairyChange = () => {
     setIsDairyChecked(!isDairyChecked)
   }
+  const handleTampaSelect = () => {
+    setIsTampaSelected(!isTampaSelected)
+  }
+  const handleStPeteSelect = () => {
+    setIsStPeteSelected(!isStPeteSelected)
+  }
+
   const handleClear = () => {
     setFilter('')
     if (isOrganicChecked) setIsOrganicChecked(!isOrganicChecked)
@@ -160,7 +172,6 @@ export function ViewFarms() {
                 type="text"
                 className="search-farms"
                 placeholder="search by farm name"
-                // value={filter}
                 onChange={function (event) {
                   setFilter(event.target.value)
                 }}
@@ -176,9 +187,16 @@ export function ViewFarms() {
                 }}
               >
                 <option value="city">City (choose one)</option>
-                <option value="tampa">Tampa</option>
-                <option value="st. pete">St. Pete</option>
-                <option value="riverview">Riverview</option>
+                <option
+                  value="tampa"
+                  selected={isTampaSelected}
+                  onChange={handleTampaSelect}
+                >
+                  Tampa
+                </option>
+                <option value="st. pete" selected={isStPeteSelected}>
+                  St. Pete
+                </option>
               </select>
             </li>
             <li>

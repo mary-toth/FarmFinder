@@ -54,35 +54,104 @@ namespace FarmFinder.Controllers
                         return await _context.Farms.Where(farm => farm.City == "Tampa").ToListAsync();
                     case "st. pete":
                         return await _context.Farms.Where(farm => farm.City == "St. Pete").ToListAsync();
-                    case "riverview":
-                        return await _context.Farms.Where(farm => farm.City == "Riverview").ToListAsync();
 
+
+                    case "to":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.City == "Tampa").ToListAsync();
+                    case "so":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.City == "St. pete").ToListAsync();
                     case "o":
                         return await _context.Farms.Where(farm => farm.Organic == true).ToListAsync();
+
+                    case "tom":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.City == "Tampa").ToListAsync();
+                    case "som":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.City == "St. Pete").ToListAsync();
                     case "om":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true).ToListAsync();
+
+                    case "toe":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Eggs == true && farm.City == "Tampa").ToListAsync();
+                    case "soe":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.City == "St. Pete").ToListAsync();
                     case "oe":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.Eggs == true).ToListAsync();
+
+                    case "tod":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Dairy == true && farm.City == "Tampa").ToListAsync();
+                    case "sod":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Dairy == true && farm.City == "St. Pete").ToListAsync();
                     case "od":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.Dairy == true).ToListAsync();
+
+                    case "tome":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true && farm.City == "Tampa").ToListAsync();
+                    case "some":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true && farm.City == "St. Pete").ToListAsync();
                     case "ome":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true).ToListAsync();
+                    
+                    case "tomd":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Dairy == true && farm.City == "Tampa").ToListAsync();
+                    case "somd":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Dairy == true && farm.City == "St. Pete").ToListAsync();
                     case "omd":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Dairy == true).ToListAsync();
+                    
+                    case "tomed":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true && farm.Dairy == true && farm.City == "Tampa").ToListAsync();
+                    case "somed":
+                        return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true && farm.Dairy == true && farm.City == "St. Pete").ToListAsync();
                     case "omed":
                         return await _context.Farms.Where(farm => farm.Organic == true && farm.Meat == true && farm.Eggs == true && farm.Dairy == true).ToListAsync();
+                    
+                    case "tm":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.City == "Tampa").ToListAsync();
+                    case "sm":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.City == "St. Pete").ToListAsync();
                     case "m":
                         return await _context.Farms.Where(farm => farm.Meat == true).ToListAsync();
+
+
+                    case "tme":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Eggs == true && farm.City == "Tampa").ToListAsync();
+                    case "sme":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Eggs == true && farm.City == "St. Pete").ToListAsync();
                     case "me":
                         return await _context.Farms.Where(farm => farm.Meat == true && farm.Eggs == true).ToListAsync();
+
+                    case "tmd":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true && farm.City == "Tampa").ToListAsync();
+                    case "smd":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true && farm.City == "St. Pete").ToListAsync();
                     case "md":
                         return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true).ToListAsync();
+                   
+                    case "tmde":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true && farm.Eggs == true && farm.City == "Tampa").ToListAsync();
+                    case "smde":
+                        return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true && farm.Eggs == true && farm.City == "St. Pete").ToListAsync();
                     case "mde":
                         return await _context.Farms.Where(farm => farm.Meat == true && farm.Dairy == true && farm.Eggs == true).ToListAsync();
+                    
+                    case "te":
+                        return await _context.Farms.Where(farm => farm.Eggs == true && farm.City == "Tampa").ToListAsync();
+                    case "se":
+                        return await _context.Farms.Where(farm => farm.Eggs == true && farm.City == "St. Pete").ToListAsync();
                     case "e":
                         return await _context.Farms.Where(farm => farm.Eggs == true).ToListAsync();
+
+                    case "ted":
+                        return await _context.Farms.Where(farm => farm.Eggs == true && farm.Dairy == true && farm.City == "Tampa").ToListAsync();
+                    case "sed":
+                        return await _context.Farms.Where(farm => farm.Eggs == true && farm.Dairy == true && farm.City == "St. Pete").ToListAsync();
                     case "ed":
                         return await _context.Farms.Where(farm => farm.Eggs == true && farm.Dairy == true).ToListAsync();
+                    
+                    case "td":
+                        return await _context.Farms.Where(farm => farm.Dairy == true && farm.City == "Tampa").ToListAsync();
+                    case "sd":
+                        return await _context.Farms.Where(farm => farm.Dairy == true && farm.City == "St. Pete").ToListAsync();
                     case "d":
                         return await _context.Farms.Where(farm => farm.Dairy == true).ToListAsync();
                     default:
