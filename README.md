@@ -1,5 +1,7 @@
 # FarmFinder
-As a lover of fresh, local produce, I wanted to create an app that would help people support local farms in their area. Users can view a list of farms, filter by city and type of farm, and add a farm to the database. 
+
+Farm Finder is a React app intended to help people support local farms in their area. Users can view a list of farms, filter by city and type of farm, and add a farm to the database.  
+
 
 <img width="475" alt="Screen Shot 2021-06-30 at 10 54 04 PM" src="https://user-images.githubusercontent.com/81791251/124058018-93377700-d9f6-11eb-85cd-9ddcd6c8119a.png">
 
