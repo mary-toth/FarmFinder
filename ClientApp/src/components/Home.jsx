@@ -15,7 +15,7 @@ export function Home() {
 
         <div className="body">
           <section className="body">
-            <h2 className="who-are-we">Who are we?</h2>
+            <h2 className="who-are-we">About Us</h2>
             Farm Finder was inspired by a desire to make finding fresh, local
             produce an easier process. By supporting local farms, you’re
             supporting families, healthier food, and farming practices that
