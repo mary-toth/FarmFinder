@@ -191,7 +191,7 @@ export function AddFarm() {
               name="website"
               id="website"
               value={newFarm.website}
-              placeholder="www.website.com"
+              placeholder="https://www.website.com (https:// is required)"
               onChange={handleStringFieldChange}
             />
           </li>
