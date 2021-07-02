@@ -107,7 +107,6 @@ div.body {
 }
 section.body {
   max-width: 900px;
-  // border: thin solid rgb(161, 147, 134);
   padding: 40px;
   border-radius: 1rem;
   background-color: white;
@@ -214,7 +213,6 @@ ul.farmlist {
 ul.farmlist li {
   margin-bottom: 20px;
   background-color: white;
-  // border: thin solid rgb(199, 207, 197);
   padding: 25px;
   margin: 10px;
 }
@@ -359,7 +357,6 @@ nav.farm-detail-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // margin: 20px;
   background-image: url(/images/farmdetails3.jpg);
 
   background-repeat: no-repeat;
@@ -373,12 +370,9 @@ ul.farm-info {
   padding: 60px;
   text-align: justify;
   background-color: white;
-
-  // border: solid;
 }
 li.farm-info {
   text-align: center;
-  // margin-top: -5px;
 
   margin-bottom: 25px;
   margin-top: 20px;
@@ -421,7 +415,6 @@ button.website:hover {
 footer {
   display: flex;
   justify-content: space-between;
-  // position: fixed;
 }
 .footer-left {
   font-size: 14px;
